@@ -1,0 +1,93 @@
+<!doctype html>
+<title>Account Activation Result</title>
+<head>
+  <meta charset='utf-8'>
+</head>
+<style>
+	body{
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+
+</style>
+<body>
+<div style="background-color:#e5e5e5 !important;">
+    <table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+    <tbody>
+        <tr>
+            <td align="center" style="padding-bottom:40px;padding-top:40px">
+                <img src="https://data.fpt.vn/Styles/images/logo.png" alt="Logo" width="120">
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffffaa;padding-left:20px;padding-right:20px;padding-bottom:20px;width:100%;max-width:650px;margin:0 auto;">
+    <tbody>
+        <tr>
+            <td>
+                <p style="font-size:16px;line-height:26px;font-weight:bold;margin:30px 0 6px">
+                    Xin chào {{ user.user_name }},
+                </p>
+
+                <p style="line-height:20px;margin:0">
+                    Tài khoản của bạn đã được tạo thành công. Chào mừng bạn đến với hệ thống Cloud của chúng tôi.
+                    Tuy nhiên, bạn vẫn còn một bước nữa để hoàn thành việc đăng kí này.
+                    <br/>Vui lòng nhất nút bên dưới để kích hoạt tài khoản.<br/><br/>
+                    Xin cám ơn và chúc bạn một ngày tốt lành.
+                </p>
+
+                <a class="btn-primary" href="{{ url_for('user.activate', token=token, _external=True) }}"
+                   style="width:300px;height:40px;display:block;margin:0 auto;background:#5eaff0;color:#fff;line-height:40px;margin:30px auto 40px;text-align:center;text-decoration:none;border:0"
+                   target="_blank">
+                  <b>KÍCH HOẠT TÀI KHOẢN</b>
+                </a>
+
+                <p style="margin:20px 0 0;font-size:12px;color:#9b9b9b">Nếu bạn cần thêm hỗ trợ, đừng ngần ngại gọi số hotline <b>024 7300 2222</b> hoặc gửi mail đến địa chỉ <a style="color:#3591e2" href="mailto:ftel.ftihn.idc@fpt.com.vn" target="_blank">ftel.ftihn.idc@fpt.com.vn</a>, chúng tôi sẽ trợ giúp bạn nhanh nhất có thể.</p>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" style="background-color:#e5e5e5;padding:20px;width:100%;">
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffffaa;padding-left:20px;padding-right:20px;padding-bottom:20px;width:100%;max-width:650px;margin:0 auto;">
+    <tbody>
+        <tr>
+            <td>
+                <br/>
+                <span style="color:#aaaaaa;"><i>-- English version</i></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size:16px;line-height:26px;font-weight:bold;margin:30px 0 6px">
+                    Hello {{ user.user_name }},
+                </p>
+
+                <p style="line-height:20px;margin:0">
+                    Your account has been created. Welcome you to join our cloud system.
+                    However, you still have a small step to complete the registration.
+                    Please click on the below button to activate your account.<br/><br/>
+                    Thank you and have a nice day.
+                </p>
+
+                <a class="btn-primary" href="{{ url_for('user.activate', token=token, _external=True) }}"
+                   style="width:300px;height:40px;display:block;margin:0 auto;background:#5eaff0;color:#fff;line-height:40px;margin:30px auto 40px;text-align:center;text-decoration:none;border:0"
+                   target="_blank">
+                  <b>ACTIVATE MY ACCOUNT</b>
+                </a>
+
+                <p style="margin:20px 0 0;font-size:12px;color:#9b9b9b">If you need any support, don't hesitate to call our hotline number <b>024 7300 2222</b> or send your e-mail to <a style="color:#3591e2" href="mailto:ftel.ftihn.idc@fpt.com.vn" target="_blank">ftel.ftihn.idc@fpt.com.vn</a>, we are willing to support you as soon as possible.</p>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+    <tbody>
+        <tr>
+            <td align="center" style="padding-bottom:40px;padding-top:40px;color: #aaaaaa">
+                © 2020 FPT Telecom Ltd.
+            </td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+</body>

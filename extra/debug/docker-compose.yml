@@ -1,0 +1,48 @@
+version: '2'
+
+services:
+  pgsql:
+    image: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - pgsql_data
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=foxcloud-api-user
+      - POSTGRES_PASSWORD=Fti@123
+      - POSTGRES_DB=foxcloud
+
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 8080:80
+    volumes:
+      - pgadmin_data
+    restart: unless-stopped
+    depends_on:
+      - pgsql
+    links:
+      - pgsql
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin
+      - PGADMIN_DEFAULT_PASSWORD=Fti@123
+
+  portainer:
+    image: portainer/portainer-ce
+    ports:
+      - 8000:8000
+      - 9000:9000
+    volumes:
+      - portainer_data
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+
+
+volumes:
+  pgsql_data:
+    driver: local
+  pgadmin_data:
+    driver: local
+  portainer_data:
+    driver: local

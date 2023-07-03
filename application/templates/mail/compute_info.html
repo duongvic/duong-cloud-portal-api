@@ -1,0 +1,289 @@
+<!doctype html>
+<title>Compute Info</title>
+<head>
+  <meta charset='utf-8'>
+</head>
+<style>
+	body{
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+</style>
+<body>
+<div style="background-color:#e5e5e5 !important;">
+    <table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+    <tbody>
+        <tr>
+            <td align="center" style="padding-bottom:40px;padding-top:40px">
+                <img src="https://data.fpt.vn/Styles/images/logo.png" alt="Logo" width="120">
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffffaa;padding-left:20px;padding-right:20px;padding-bottom:20px;width:100%;max-width:650px;margin:0 auto;">
+    <tbody>
+        <tr>
+            <td>
+                <p style="font-size:16px;line-height:26px;font-weight:bold;margin:30px 0 6px">
+                    Xin chào {{ user.user_name }},
+                </p>
+
+                <p style="line-height:20px;margin:0">
+                    Compute của bạn đã được khởi tạo xong. Dưới đây là thông tin chi tiết:
+                </p>
+
+                {% set cp_info = compute.data['info'] %}
+                <br/>
+                <table border="0" cellpadding="0" cellspacing="0" style="width:100%;border:solid 2px #5eaff0;padding-bottom:10px;">
+                    <thead bgcolor="#5eaff0" align="left">
+                      <tr>
+                        <th colspan="2" style="text-align:left;padding-top:10px;padding-left:15px;padding-bottom:10px;color:#fff">Thông tin sử dụng</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">IP public:</td>
+                        <td valign="bottom" style="width:70%;padding-left:15px;padding-top:10px;">{{ compute.public_ip }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">Cổng kết nối SSH:</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ ssh_port or 22 }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">Username:</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ cp_info.get('username') or '' }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">Password:</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ compute.decrypt(cp_info.get('password')) or 'Không dùng' }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">SSH key:</td>
+                        {% if cp_info.get('ssh_key') %}
+                          <td valign="bottom" style="padding-left:15px;padding-top:10px;">Có dùng (chúng tôi không lưu Private Key của bạn trên server)</td>
+                        {% else %}
+                          <td valign="bottom" style="padding-left:15px;padding-top:10px;">Không dùng</td>
+                        {% endif %}
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">Ngày tạo (GMT):</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ compute.get_datetime_attr('create_date') }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">Ngày kết thúc (GMT):</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ compute.get_datetime_attr('end_date') }}</td>
+                      </tr>
+                    </tbody>
+                </table>
+
+                <br/>
+                <table border="0" cellpadding="0" cellspacing="0" style="width:100%;border:solid 2px #5eaff0;padding-bottom:10px;">
+                    <thead bgcolor="#5eaff0" align="left">
+                      <tr>
+                        <th colspan="2" style="text-align:left;padding-top:10px;padding-left:15px;padding-bottom:10px;color:#fff">Thông tin Compute</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">Tên:</td>
+                        <td valign="bottom" style="width:70%;padding-left:15px;padding-top:10px;">{{ compute.name or 'N/A' }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">ID:</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ (compute.backend_id or '').split('/')[-1] or 'N/A' }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">vCPU:</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ (cp_info.get('cpu') or 0)|int or 'N/A' }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">RAM (GB):</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ (cp_info.get('mem') or 0)|int or 'N/A' }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">Disk (GB):</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ (cp_info.get('disk') or 0)|int or 'N/A' }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">Hệ Điều Hành:</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ cp_info.get('os_name') or 'N/A' }}</td>
+                      </tr>
+                    </tbody>
+                </table>
+
+                <br/>
+                <table border="0" cellpadding="0" cellspacing="0" style="width:100%;border:solid 2px #5eaff0;padding-bottom:10px;">
+                    <thead bgcolor="#5eaff0" align="left">
+                      <tr>
+                        <th style="text-align:left;padding-top:10px;padding-left:15px;padding-bottom:10px;color:#fff">Thông tin Firewall</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-right:10px;padding-top:10px;">
+                            Vì lý do an toàn và bảo mật, mặc định chúng tôi không mở port nào trên máy chủ của bạn.
+                            Vui lòng đăng nhập vào Portal để thiết lập Firewall như mong muốn.
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+
+                <br/>
+                <p style="line-height:20px;margin:0">
+                    Xin cám ơn và chúc bạn một ngày tốt lành.
+                </p>
+
+                <a href="{{ url_for('compute.computes', _external=True) }}"
+                   style="width:300px;height:40px;display:block;margin:0 auto;background:#5eaff0;color:#fff;line-height:40px;margin:30px auto 40px;text-align:center;text-decoration:none;border:0"
+                   target="_blank">
+                    <b>ĐĂNG NHẬP HỆ THỐNG QUẢN LÝ</b>
+                </a>
+
+                <p style="margin:20px 0 0;font-size:12px;color:#9b9b9b">Nếu bạn cần thêm hỗ trợ, đừng ngần ngại gọi số hotline <b>024 7300 2222</b> hoặc gửi mail đến địa chỉ <a style="color:#3591e2" href="mailto:ftel.ftihn.idc@fpt.com.vn" target="_blank">ftel.ftihn.idc@fpt.com.vn</a>, chúng tôi sẽ trợ giúp bạn nhanh nhất có thể.</p>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" style="background-color:#e5e5e5;padding:20px;width:100%;">
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffffaa;padding-left:20px;padding-right:20px;padding-bottom:20px;width:100%;max-width:650px;margin:0 auto;">
+    <tbody>
+        <tr>
+            <td>
+                <br/>
+                <span style="color:#aaaaaa;"><i>-- English version</i></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size:16px;line-height:26px;font-weight:bold;margin:30px 0 6px">
+                    Hello {{ user.user_name }},
+                </p>
+
+                <p style="line-height:20px;margin:0">
+                    Your compute has been created. Below is the information of it:
+                </p>
+
+                {% set cp_info = compute.data['info'] %}
+                <br/>
+                <table border="0" cellpadding="0" cellspacing="0" style="width:100%;border:solid 2px #5eaff0;padding-bottom:10px;">
+                    <thead bgcolor="#5eaff0" align="left">
+                      <tr>
+                        <th colspan="2" style="text-align:left;padding-top:10px;padding-left:15px;padding-bottom:10px;color:#fff">Access information</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">IP public:</td>
+                        <td valign="bottom" style="width:70%;padding-left:15px;padding-top:10px;">{{ compute.public_ip }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">SSH port:</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ ssh_port or 22 }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">Username:</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ cp_info.get('username') or '' }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">Password:</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ compute.decrypt(cp_info.get('password')) or 'Unused' }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">SSH key:</td>
+                        {% if cp_info.get('ssh_key') %}
+                          <td valign="bottom" style="padding-left:15px;padding-top:10px;">Yes (we don't store your Private Key in the server)</td>
+                        {% else %}
+                          <td valign="bottom" style="padding-left:15px;padding-top:10px;">Unused</td>
+                        {% endif %}
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">Created date (GMT):</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ compute.get_datetime_attr('create_date') }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">Expiring date (GMT):</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ compute.get_datetime_attr('end_date') }}</td>
+                      </tr>
+                    </tbody>
+                </table>
+
+                <br/>
+                <table border="0" cellpadding="0" cellspacing="0" style="width:100%;border:solid 2px #5eaff0;padding-bottom:10px;">
+                    <thead bgcolor="#5eaff0" align="left">
+                      <tr>
+                        <th colspan="2" style="text-align:left;padding-top:10px;padding-left:15px;padding-bottom:10px;color:#fff">Compute information</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">Name:</td>
+                        <td valign="bottom" style="width:70%;padding-left:15px;padding-top:10px;">{{ compute.name or 'N/A' }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">ID:</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ (compute.backend_id or '').split('/')[-1] or 'N/A' }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">vCPU:</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ (cp_info.get('cpu') or 0)|int or 'N/A' }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">RAM (GB):</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ (cp_info.get('mem') or 0)|int or 'N/A' }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">Disk (GB):</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ (cp_info.get('disk') or 0)|int or 'N/A' }}</td>
+                      </tr>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">OS:</td>
+                        <td valign="bottom" style="padding-left:15px;padding-top:10px;">{{ cp_info.get('os_name') or 'N/A' }}</td>
+                      </tr>
+                    </tbody>
+                </table>
+
+                <br/>
+                <table border="0" cellpadding="0" cellspacing="0" style="width:100%;border:solid 2px #5eaff0;padding-bottom:10px;">
+                    <thead bgcolor="#5eaff0" align="left">
+                      <tr>
+                        <th style="text-align:left;padding-top:10px;padding-left:15px;padding-bottom:10px;color:#fff">Firewall information</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="bottom" style="padding-left:15px;padding-right:10px;padding-top:10px;">
+                            For safety reason, we don't open any port on your compute instance.
+                            If you need some open, please go to the dashboard and configure the firewall
+                            as you expect.
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+
+                <br/>
+                <p style="line-height:20px;margin:0">
+                    Thank you and have a nice day.
+                </p>
+
+                <a href="{{ url_for('compute.computes', _external=True) }}"
+                   style="width:320px;height:40px;display:block;margin:0 auto;background:#5eaff0;color:#fff;line-height:40px;margin:30px auto 40px;text-align:center;text-decoration:none;border:0"
+                   target="_blank">
+                    <b>GO TO THE MANAGEMENT DASHBOARD</b>
+                </a>
+
+                <p style="margin:20px 0 0;font-size:12px;color:#9b9b9b">If you need any support, don't hesitate to call our hotline number <b>024 7300 2222</b> or send your e-mail to <a style="color:#3591e2" href="mailto:ftel.ftihn.idc@fpt.com.vn" target="_blank">ftel.ftihn.idc@fpt.com.vn</a>, we are willing to support you as soon as possible.</p>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+    <tbody>
+        <tr>
+            <td align="center" style="padding-bottom:40px;padding-top:40px;color: #aaaaaa">
+                © 2020 FPT Telecom Ltd.
+            </td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+</body>

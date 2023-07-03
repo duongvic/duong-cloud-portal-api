@@ -1,0 +1,36 @@
+## Config postgresql for external connections
+
+- Install postgresql (ver 11 or higher)
+    Ubuntu/debian: $ sudo apt install postgresql-11
+
+- Install tools
+    Ubuntu/debian: $ sudo apt install crudini
+
+- Create user/db
+    $ sudo -u postgres psql
+    $ create user "cloud-dashboard-user" with password '<password-get-from-config>';
+    $ create database "cloud-dashboard";
+    $ GRANT ALL PRIVILEGES ON DATABASE "cloud-dashboard" to "cloud-dashboard-user";
+
+- Update config:
+    Ubuntu/debian:
+        # Get config file path
+        $ psql -U postgres -c 'SHOW config_file'
+
+        # CD to config dir
+        $ cd /etc/postgresql/11/main/
+
+        # Add listen_addresses = '*' to postgresql.conf
+        $ crudini --set postgresql.conf '' listen_addresses "'*'"
+
+        # OR Add a new config file:  --> RECOMMENDED
+        $ touch conf.d/fti_cas.conf
+        $ crudini --set conf.d/fti_cas.conf '' listen_addresses "'*'"
+
+        # Add connection config to pg_hba.conf for the user
+        # Config form: local/host  DB  USER  METHOD
+        $ echo "host   cloud-dashboard   cloud-dashboard-user  0.0.0.0/0  scram-sha-256" >> pg_hba.conf
+        $ echo "host   cloud-dashboard   cloud-dashboard-user  0.0.0.0/0  md5" >> pg_hba.conf
+
+        # Restart postgresql
+        $ sudo service postgresql restart

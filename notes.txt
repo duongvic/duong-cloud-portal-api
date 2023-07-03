@@ -1,0 +1,14 @@
+## Gen models from db
+flask-sqlacodegen --flask --outfile models.py postgresql://cloud-dashboard-user:Fti@123@localhost:5432/cloud-dashboard
+
+## Migrate database
+Export APP_FLASK=index.py
+flask db init
+flask db migrate -m "Initial migration."
+flask db upgrade
+
+## Update translations
+    - pybabel extract -F babel.cfg -k _l -o messages.pot .
+    - pybabel init -i messages.pot -d application/translations -l vi
+    - pybabel compile -d application/translations
+    - pybabel update -i messages.pot -d application/translations

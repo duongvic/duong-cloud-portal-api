@@ -1,0 +1,11 @@
+### Temp dirs ###
+.vscode/
+.idea/
+venv/
+build/
+dist/
+temp/
+**/__pycache__/**
+
+### File ###
+*.pyc

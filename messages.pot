@@ -1,0 +1,845 @@
+# Translations template for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-07-14 15:33+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: application/__init__.py:50
+msgid "Please log in to access this page."
+msgstr ""
+
+#: application/base/errors.py:8
+msgid "Failed to commit object to database"
+msgstr ""
+
+#: application/base/errors.py:10
+msgid "Failed to acquire lock in database"
+msgstr ""
+
+#: application/base/errors.py:12
+msgid "Failed to release lock in database"
+msgstr ""
+
+#: application/base/errors.py:15
+msgid "Configuration not found"
+msgstr ""
+
+#: application/base/errors.py:17
+msgid "Configuration value not found"
+msgstr ""
+
+#: application/base/errors.py:19
+msgid "Failed to write configuration to database"
+msgstr ""
+
+#: application/base/errors.py:22
+msgid "User not found"
+msgstr ""
+
+#: application/base/errors.py:24
+msgid "User not login"
+msgstr ""
+
+#: application/base/errors.py:26
+msgid "User not authorized"
+msgstr ""
+
+#: application/base/errors.py:28
+msgid "User admin role required"
+msgstr ""
+
+#: application/base/errors.py:30
+msgid "User not activated"
+msgstr ""
+
+#: application/base/errors.py:32
+msgid "User already activated"
+msgstr ""
+
+#: application/base/errors.py:34
+msgid "User blocked or deleted"
+msgstr ""
+
+#: application/base/errors.py:36
+msgid "User already exists"
+msgstr ""
+
+#: application/base/errors.py:38
+msgid "User token invalid"
+msgstr ""
+
+#: application/base/errors.py:40
+msgid "User activation token invalid"
+msgstr ""
+
+#: application/base/errors.py:42
+msgid "User name invalid"
+msgstr ""
+
+#: application/base/errors.py:44
+msgid "User e-mail invalid"
+msgstr ""
+
+#: application/base/errors.py:46
+msgid "User password invalid"
+msgstr ""
+
+#: application/base/errors.py:48
+msgid "User password does not meet requirements"
+msgstr ""
+
+#: application/base/errors.py:50
+msgid "User password reset token invalid"
+msgstr ""
+
+#: application/base/errors.py:52
+msgid "User password reset token expired"
+msgstr ""
+
+#: application/base/errors.py:54
+msgid "Failed to create user, try again later"
+msgstr ""
+
+#: application/base/errors.py:56
+msgid "Failed to update user"
+msgstr ""
+
+#: application/base/errors.py:58
+msgid "Failed to write user to database"
+msgstr ""
+
+#: application/base/errors.py:60
+msgid "User action not allowed"
+msgstr ""
+
+#: application/base/errors.py:63
+msgid "Order not found"
+msgstr ""
+
+#: application/base/errors.py:65
+msgid "Order not finished"
+msgstr ""
+
+#: application/base/errors.py:67
+msgid "Order already finished"
+msgstr ""
+
+#: application/base/errors.py:69
+msgid "Failed to write order to database"
+msgstr ""
+
+#: application/base/errors.py:71
+msgid "Order item not found"
+msgstr ""
+
+#: application/base/errors.py:73
+msgid "Order item invalid"
+msgstr ""
+
+#: application/base/errors.py:75
+msgid "Order item expired"
+msgstr ""
+
+#: application/base/errors.py:77
+msgid "Order item type not found"
+msgstr ""
+
+#: application/base/errors.py:79
+msgid "Failed to write order item to database"
+msgstr ""
+
+#: application/base/errors.py:81
+msgid "Order type invalid"
+msgstr ""
+
+#: application/base/errors.py:83
+msgid "Order price not match"
+msgstr ""
+
+#: application/base/errors.py:85
+msgid "Order amount invalid"
+msgstr ""
+
+#: application/base/errors.py:87
+msgid "Order duration invalid"
+msgstr ""
+
+#: application/base/errors.py:89
+msgid "Order validation failed"
+msgstr ""
+
+#: application/base/errors.py:91
+msgid "Too many orders created"
+msgstr ""
+
+#: application/base/errors.py:94
+msgid "Payment not found"
+msgstr ""
+
+#: application/base/errors.py:96
+msgid "Payment type not supported"
+msgstr ""
+
+#: application/base/errors.py:98
+msgid "Payment start failed"
+msgstr ""
+
+#: application/base/errors.py:100
+msgid "Payment finish failed"
+msgstr ""
+
+#: application/base/errors.py:102
+msgid "Payment currency invalid"
+msgstr ""
+
+#: application/base/errors.py:104
+msgid "Payment currency not supported"
+msgstr ""
+
+#: application/base/errors.py:106
+msgid "Payment secure code invalid"
+msgstr ""
+
+#: application/base/errors.py:109
+msgid "Promotion not found"
+msgstr ""
+
+#: application/base/errors.py:111
+msgid "Promotion not enabled"
+msgstr ""
+
+#: application/base/errors.py:113
+msgid "Promotion not applied"
+msgstr ""
+
+#: application/base/errors.py:115
+msgid "Promotion uses exceed"
+msgstr ""
+
+#: application/base/errors.py:117
+msgid "Product not accepted for promotion"
+msgstr ""
+
+#: application/base/errors.py:119
+msgid "User not accepted for promotion"
+msgstr ""
+
+#: application/base/errors.py:121
+msgid "Promotion resource limit"
+msgstr ""
+
+#: application/base/errors.py:123
+msgid "Promotion condition not met"
+msgstr ""
+
+#: application/base/errors.py:125
+msgid "Failed to write promotion to database"
+msgstr ""
+
+#: application/base/errors.py:128
+msgid "Product not found"
+msgstr ""
+
+#: application/base/errors.py:130
+msgid "Product not enabled"
+msgstr ""
+
+#: application/base/errors.py:132
+msgid "Product type invalid"
+msgstr ""
+
+#: application/base/errors.py:134
+msgid "Product amount invalid"
+msgstr ""
+
+#: application/base/errors.py:136
+msgid "Failed to get product price"
+msgstr ""
+
+#: application/base/errors.py:138
+msgid "Failed to write product to database"
+msgstr ""
+
+#: application/base/errors.py:141
+msgid "Product type not found"
+msgstr ""
+
+#: application/base/errors.py:143
+msgid "Product type not supported"
+msgstr ""
+
+#: application/base/errors.py:146
+msgid "Compute not found"
+msgstr ""
+
+#: application/base/errors.py:148
+msgid "Compute template not found"
+msgstr ""
+
+#: application/base/errors.py:150
+msgid "Compute not enabled"
+msgstr ""
+
+#: application/base/errors.py:152
+msgid "Compute not available"
+msgstr ""
+
+#: application/base/errors.py:154
+msgid "Compute locked"
+msgstr ""
+
+#: application/base/errors.py:156
+msgid "Compute deleted"
+msgstr ""
+
+#: application/base/errors.py:158
+msgid "Failed to lock compute"
+msgstr ""
+
+#: application/base/errors.py:160
+msgid "Failed to unlock compute"
+msgstr ""
+
+#: application/base/errors.py:162
+msgid "Failed to write Compute to database"
+msgstr ""
+
+#: application/base/errors.py:164
+msgid "Compute action not supported"
+msgstr ""
+
+#: application/base/errors.py:166
+msgid "Failed to perform action on compute"
+msgstr ""
+
+#: application/base/errors.py:168
+msgid "Compute is running"
+msgstr ""
+
+#: application/base/errors.py:170
+msgid "Compute was stopped"
+msgstr ""
+
+#: application/base/errors.py:172
+msgid "Compute resource not enough"
+msgstr ""
+
+#: application/base/errors.py:174
+msgid "Compute info missing"
+msgstr ""
+
+#: application/base/errors.py:176
+msgid "Compute name invalid"
+msgstr ""
+
+#: application/base/errors.py:178
+msgid "Compute username invalid"
+msgstr ""
+
+#: application/base/errors.py:180
+msgid "Compute password invalid"
+msgstr ""
+
+#: application/base/errors.py:182
+msgid "Compute password does not meet requirement"
+msgstr ""
+
+#: application/base/errors.py:184
+msgid "Compute ssh key invalid"
+msgstr ""
+
+#: application/base/errors.py:186
+msgid "Compute stats not supported"
+msgstr ""
+
+#: application/base/errors.py:188
+msgid "Failed to re-create compute"
+msgstr ""
+
+#: application/base/errors.py:190
+msgid "Compute snapshot not supported"
+msgstr ""
+
+#: application/base/errors.py:192
+msgid "Compute snapshot not found"
+msgstr ""
+
+#: application/base/errors.py:194
+msgid "Compute snapshot already exists"
+msgstr ""
+
+#: application/base/errors.py:196
+msgid "Compute snapshots exceeded"
+msgstr ""
+
+#: application/base/errors.py:198
+msgid "Compute snapshot name invalid"
+msgstr ""
+
+#: application/base/errors.py:200
+msgid "Failed to create snapshot of compute"
+msgstr ""
+
+#: application/base/errors.py:202
+msgid "Failed to update snapshot of compute"
+msgstr ""
+
+#: application/base/errors.py:204
+msgid "Failed to delete snapshot of compute"
+msgstr ""
+
+#: application/base/errors.py:206
+msgid "Failed to rollback snapshot of compute"
+msgstr ""
+
+#: application/base/errors.py:208
+msgid "Compute backup not supported"
+msgstr ""
+
+#: application/base/errors.py:210
+msgid "Compute backup not found"
+msgstr ""
+
+#: application/base/errors.py:212
+msgid "Compute backup jobs exceeded"
+msgstr ""
+
+#: application/base/errors.py:214
+msgid "Compute backup files exceeded"
+msgstr ""
+
+#: application/base/errors.py:216
+msgid "Failed to create backup of compute"
+msgstr ""
+
+#: application/base/errors.py:218
+msgid "Failed to update backup of compute"
+msgstr ""
+
+#: application/base/errors.py:220
+msgid "Failed to delete backup of compute"
+msgstr ""
+
+#: application/base/errors.py:222
+msgid "Compute backup file not found"
+msgstr ""
+
+#: application/base/errors.py:224
+msgid "Failed to restore backup file for compute"
+msgstr ""
+
+#: application/base/errors.py:226
+msgid "Compute security group not found"
+msgstr ""
+
+#: application/base/errors.py:228
+msgid "Compute security group not valid"
+msgstr ""
+
+#: application/base/errors.py:230
+msgid "Failed to create security group for compute"
+msgstr ""
+
+#: application/base/errors.py:232
+msgid "Failed to update security group for compute"
+msgstr ""
+
+#: application/base/errors.py:234
+msgid "Failed to delete security group for compute"
+msgstr ""
+
+#: application/base/errors.py:236
+msgid "Compute cluster not found"
+msgstr ""
+
+#: application/base/errors.py:238
+msgid "Compute node not found"
+msgstr ""
+
+#: application/base/errors.py:241
+msgid "Region not found"
+msgstr ""
+
+#: application/base/errors.py:243
+msgid "Region not supported"
+msgstr ""
+
+#: application/base/errors.py:245
+msgid "Failed to write region to database"
+msgstr ""
+
+#: application/base/errors.py:248
+msgid "Backend resource not found"
+msgstr ""
+
+#: application/base/errors.py:250
+msgid "Lost connection to backend API"
+msgstr ""
+
+#: application/base/errors.py:252
+msgid "Failed to connect to backend API"
+msgstr ""
+
+#: application/base/errors.py:254
+msgid "Timeout when executing backend task"
+msgstr ""
+
+#: application/base/errors.py:256
+msgid "Failed to clone VM in backend"
+msgstr ""
+
+#: application/base/errors.py:259
+msgid "Network IP not found"
+msgstr ""
+
+#: application/base/errors.py:261
+msgid "Network IP in use"
+msgstr ""
+
+#: application/base/errors.py:263
+msgid "Network IP address invalid"
+msgstr ""
+
+#: application/base/errors.py:265
+msgid "Network IP version invalid"
+msgstr ""
+
+#: application/base/errors.py:267
+msgid "Network IP status invalid"
+msgstr ""
+
+#: application/base/errors.py:269
+msgid "Network IP is out of pools"
+msgstr ""
+
+#: application/base/errors.py:271
+msgid "Network IP pools invalid"
+msgstr ""
+
+#: application/base/errors.py:273
+msgid "Network IP pools exhausted"
+msgstr ""
+
+#: application/base/errors.py:275
+msgid "Failed to create IP in database"
+msgstr ""
+
+#: application/base/errors.py:277
+msgid "Failed to update IP in database"
+msgstr ""
+
+#: application/base/errors.py:279
+msgid "Failed to delete IP in database"
+msgstr ""
+
+#: application/base/errors.py:282
+msgid "Failed to create IP in Netbox"
+msgstr ""
+
+#: application/base/errors.py:284
+msgid "Failed to delete IP in Netbox"
+msgstr ""
+
+#: application/base/errors.py:287
+msgid "Failed to send activation e-mail"
+msgstr ""
+
+#: application/base/errors.py:289
+msgid "Failed to send reset password e-mail"
+msgstr ""
+
+#: application/base/errors.py:291
+msgid "Failed to send order complete e-mail"
+msgstr ""
+
+#: application/forms/change_password.py:18
+msgid "Current password"
+msgstr ""
+
+#: application/forms/change_password.py:19
+#: application/forms/reset_password.py:19
+msgid "New password"
+msgstr ""
+
+#: application/forms/change_password.py:20
+#: application/forms/reset_password.py:20
+msgid "Retype new password"
+msgstr ""
+
+#: application/forms/change_password.py:21
+#: application/forms/reset_password.py:21 application/routes/user.py:144
+#: application/routes/user.py:147 application/routes/user.py:149
+msgid "Change password"
+msgstr ""
+
+#: application/forms/compute.py:19 application/forms/computes.py:19
+#: application/forms/forgot_password.py:16 application/forms/login.py:18
+msgid "Username"
+msgstr ""
+
+#: application/forms/compute.py:20 application/forms/computes.py:20
+#: application/forms/login.py:19 application/forms/registration.py:26
+msgid "Password"
+msgstr ""
+
+#: application/forms/compute.py:21 application/forms/computes.py:21
+msgid "SSH key"
+msgstr ""
+
+#: application/forms/compute.py:22
+msgid "Create Compute"
+msgstr ""
+
+#: application/forms/computes.py:22
+msgid "Create VM"
+msgstr ""
+
+#: application/forms/forgot_password.py:17 application/routes/user.py:191
+#: application/routes/user.py:193 application/templates/forgot_password.html:63
+msgid "Reset password"
+msgstr ""
+
+#: application/forms/login.py:20
+msgid "Remember Me"
+msgstr ""
+
+#: application/forms/login.py:21 application/routes/user.py:42
+#: application/routes/user.py:44
+msgid "Sign In"
+msgstr ""
+
+#: application/forms/order.py:19
+msgid "Group id"
+msgstr ""
+
+#: application/forms/order.py:20 application/forms/payment.py:20
+msgid "Amount"
+msgstr ""
+
+#: application/forms/order.py:21
+msgid "Duration"
+msgstr ""
+
+#: application/forms/order.py:22
+msgid "Product id"
+msgstr ""
+
+#: application/forms/order.py:23
+msgid "Product name"
+msgstr ""
+
+#: application/forms/order.py:24
+msgid "Product info"
+msgstr ""
+
+#: application/forms/order.py:25
+msgid "Product pricing"
+msgstr ""
+
+#: application/forms/order.py:34
+msgid "Payment type"
+msgstr ""
+
+#: application/forms/order.py:35
+msgid "Order id"
+msgstr ""
+
+#: application/forms/order.py:36
+msgid "Order description"
+msgstr ""
+
+#: application/forms/order.py:37 application/forms/payment.py:22
+msgid "Order notes"
+msgstr ""
+
+#: application/forms/order.py:38
+msgid "Promotion id"
+msgstr ""
+
+#: application/forms/order.py:39 application/forms/payment.py:23
+msgid "Discount code"
+msgstr ""
+
+#: application/forms/order.py:40
+msgid "Currency"
+msgstr ""
+
+#: application/forms/order.py:41
+msgid "Create date"
+msgstr ""
+
+#: application/forms/order.py:45
+msgid "Payment"
+msgstr ""
+
+#: application/forms/order.py:46 application/forms/payment.py:25
+msgid "Submit"
+msgstr ""
+
+#: application/forms/payment.py:18
+msgid "Product_id"
+msgstr ""
+
+#: application/forms/payment.py:21
+msgid "Order desc"
+msgstr ""
+
+#: application/forms/profile.py:19
+msgid "User_name"
+msgstr ""
+
+#: application/forms/profile.py:20 application/forms/registration.py:20
+msgid "Email"
+msgstr ""
+
+#: application/forms/profile.py:21 application/forms/registration.py:21
+msgid "Full name"
+msgstr ""
+
+#: application/forms/profile.py:22 application/forms/registration.py:22
+msgid "Work phone"
+msgstr ""
+
+#: application/forms/profile.py:23 application/forms/registration.py:23
+msgid "Cell phone"
+msgstr ""
+
+#: application/forms/profile.py:24 application/forms/registration.py:24
+msgid "Address"
+msgstr ""
+
+#: application/forms/profile.py:25 application/forms/registration.py:25
+msgid "City"
+msgstr ""
+
+#: application/forms/profile.py:26
+msgid "Country code"
+msgstr ""
+
+#: application/forms/profile.py:27
+msgid "ID number"
+msgstr ""
+
+#: application/forms/profile.py:28
+msgid "Language"
+msgstr ""
+
+#: application/forms/profile.py:29
+msgid "Update profile"
+msgstr ""
+
+#: application/forms/registration.py:19
+msgid "User name"
+msgstr ""
+
+#: application/forms/registration.py:27
+msgid "Repeat Password"
+msgstr ""
+
+#: application/routes/dashboard.py:46 application/routes/dashboard.py:83
+msgid "Compute service"
+msgstr ""
+
+#: application/routes/dashboard.py:482
+msgid "Change language successfully"
+msgstr ""
+
+#: application/routes/dashboard_admin.py:35
+#: application/routes/dashboard_admin.py:78
+msgid "List order"
+msgstr ""
+
+#: application/routes/dashboard_admin.py:50
+msgid "List customer"
+msgstr ""
+
+#: application/routes/order.py:42
+msgid "Orders"
+msgstr ""
+
+#: application/routes/user.py:41 application/routes/user.py:78
+#: application/routes/user.py:98 application/routes/user.py:122
+#: application/routes/user.py:146 application/routes/user.py:168
+#: application/routes/user.py:190
+msgid "errormessage"
+msgstr ""
+
+#: application/routes/user.py:75
+msgid "Congratulations, you are now able to log in."
+msgstr ""
+
+#: application/routes/user.py:95
+msgid "Congratulations, you are now a registered user!"
+msgstr ""
+
+#: application/routes/user.py:99 application/routes/user.py:101
+msgid "Register"
+msgstr ""
+
+#: application/routes/user.py:119
+msgid "Update profile successfully"
+msgstr ""
+
+#: application/routes/user.py:123 application/routes/user.py:125
+msgid "Profile"
+msgstr ""
+
+#: application/routes/user.py:143
+msgid "Update password success"
+msgstr ""
+
+#: application/routes/user.py:165
+msgid "Check e-mail to reset your password"
+msgstr ""
+
+#: application/routes/user.py:166 application/routes/user.py:169
+#: application/routes/user.py:171
+msgid "Forgot password"
+msgstr ""
+
+#: application/routes/user.py:187
+msgid "Your password has been reset"
+msgstr ""
+
+#: application/templates/_base.html:40
+msgid "Home"
+msgstr ""
+
+#: application/templates/forgot_password.html:48
+#: application/templates/forgot_password.html:72
+msgid "Tên đăng nhập hoặc email"
+msgstr ""
+
+#: application/templates/reset_password.html:53
+msgid "Nhập mật khẩu"
+msgstr ""
+
+#: application/templates/reset_password.html:57
+msgid "Nhập lại mật khẩu"
+msgstr ""
+
+#: application/utils/mail_util.py:84
+msgid "Account Activation"
+msgstr ""
+
+#: application/utils/mail_util.py:97
+msgid "Account Password Reset"
+msgstr ""
+
+#: application/utils/mail_util.py:109
+msgid "Order Complete"
+msgstr ""
+

@@ -1,0 +1,222 @@
+version: '3.8'
+
+networks:
+  casnetwork:
+    driver: bridge
+
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:1.13.10-alpine
+    depends_on:
+      - cas-portal
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "./deployment/nginx/conf/nginx.conf:/etc/nginx/nginx.conf"
+      - "./deployment/nginx/conf/default:/etc/nginx/sites-enabled/default"
+      - "./deployment/nginx/ssl:/cas/ssl"
+      - "./deployment/nginx/upstream:/etc/nginx/upstream:z"
+      - "./deployment/nginx/logs:/var/log/nginx"
+    restart: always
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+
+  # casdb-0:
+  #   image: bitnami/postgresql-repmgr:11
+  #   ports:
+  #     - 5432
+  #   volumes:
+  #     - casdb_0_data:/bitnami/postgresql
+  #   env_file:
+  #     - ./envs/pgrep.env
+  #   environment:
+  #     - REPMGR_NODE_NAME=casdb-0
+  #     - REPMGR_NODE_NETWORK_NAME=casdb-0
+  #   restart: always
+  #   networks:
+  #     - casnetwork
+
+  # casdb-1:
+  #   image: bitnami/postgresql-repmgr:11
+  #   ports:
+  #     - 5432
+  #   volumes:
+  #     - casdb_1_data:/bitnami/postgresql
+  #   env_file:
+  #     - ./envs/pgrep.env
+  #   environment:
+  #     - REPMGR_NODE_NAME=casdb-1
+  #     - REPMGR_NODE_NETWORK_NAME=casdb-1
+  #   restart: always
+  #   networks:
+  #     - casnetwork
+
+  # cas-pgpool:
+  #   image: bitnami/pgpool:4
+  #   ports:
+  #     - 5435:5432
+  #   env_file:
+  #     - ./envs/pgpool.env
+  #   healthcheck:
+  #     test: ["CMD", "/healthcheck.sh"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+  #   restart: always
+  #   networks:
+  #     - casnetwork
+
+  # cas-pg-backup:
+  #   image: postdock/barman
+  #   env_file:
+  #     - ./envs/pgbarman.env
+  #   volumes:
+  #   - cas-dbbackup-data:/var/backup
+  #   networks:
+  #     - casnetwork
+    # - ./ssh:/tmp/.ssh/keys
+
+  cas-pgpool:
+    image: postgres
+    environment:
+      POSTGRES_USER: ${CAS_DB_USER}
+      POSTGRES_PASSWORD: ${CAS_DB_PASSWORD}
+      POSTGRES_DB: ${CAS_DB_NAME}
+    volumes:
+      - casdb_0_data:/var/lib/postgresql/data
+    ports:
+      - ${CAS_DB_PORT}:${CAS_DB_PORT}
+
+  cas-prometheus:
+    image: prom/prometheus
+    ports:
+      - 9090:9090
+    volumes:
+      - ./configs/prometheus.yml:/etc/prometheus/prometheus.yml
+      - cas-prometheus:/prometheus
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+  
+  cas-grafana:
+    image: grafana/grafana:6.3.5
+    env_file:
+      - ./envs/grafana.env
+    ports:
+      - 3000:3000
+    volumes:
+      - cas-grafana-data:/var/lib/grafana
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+
+  cas-portal:
+    image: casportal
+    command: gunicorn -b ${CAS_SERVER_HOST}:${CAS_SERVER_PORT} -w ${CAS_SERVER_WORKERS}
+      --threads ${CAS_SERVER_WORKER_THREADS} --log-file ${CAS_LOG_PATH}/server_gunicorn.log
+      --pid ${CAS_RUN_PATH}/server_gunicorn.pid index:app
+    env_file:
+      - ./envs/cas_portal.env
+    volumes:
+      - cas-data:/home/app
+    ports:
+      - ${CAS_SERVER_PORT}:${CAS_SERVER_PORT}
+    depends_on:
+      - cas-pgpool
+    restart: always
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+
+#  cas-webssh:
+#    image: caswebssh
+#    entrypoint: ./entrypoint.sh
+#    volumes:
+#      - cas-webssh-data:/home/app
+#    ports:
+#      - ${CAS_WEBSSH_PORT}:${CAS_WEBSSH_PORT}
+#    restart: always
+#    env_file:
+#      - ./envs/webssh.env
+#    deploy:
+#      replicas: 1
+#      restart_policy:
+#        condition: on-failure
+#        delay: 5s
+#        max_attempts: 3
+#        window: 120s
+
+  cas-redis-master:
+    image: bitnami/redis:${CAS_REDIS_VERSION}
+    environment:
+      - REDIS_REPLICATION_MODE=master
+    volumes:
+      - cas-redis-data:/bitnami/redis/data
+    ports:
+      - ${REDIS_MASTER_PORT_NUMBER}:${REDIS_MASTER_PORT_NUMBER}
+    restart: unless-stopped
+    env_file:
+      - ./envs/redis.env
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+
+  cas-redis-replica:
+    image: bitnami/redis:${CAS_REDIS_VERSION}
+    environment:
+      - REDIS_REPLICATION_MODE=slave
+      - REDIS_MASTER_HOST=cas-redis-master
+    ports:
+      - ${REDIS_MASTER_PORT_NUMBER}
+    depends_on:
+      - cas-redis-master
+    env_file:
+      - ./envs/redis.env
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+
+volumes:
+  casdb_0_data:
+    driver: local
+  casdb_1_data:
+    driver: local
+  cas-dbbackup-data:
+    driver: local
+  cas-data:
+    driver: local
+  cas-webssh-data:
+    driver: local
+  cas-redis-data:
+    driver: local
+  cas-prometheus:
+    driver: local
+  cas-grafana-data:
+    driver: local

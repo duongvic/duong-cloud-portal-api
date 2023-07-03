@@ -1,0 +1,497 @@
+
+Table user as U {
+  id int [pk, increment]
+  user_name varchar(50) [not null, unique]
+  email varchar(50) [not null, unique]
+  status varchar(50) [default: 'DEACTIVATED']
+  create_date timestamp
+  end_date timestamp [null, default: null]
+  password_hash varchar(255)
+  role varchar(1024) [default: 'USER']
+  group_id int [ref: > USRGRP.id]
+  group_role varchar(1024)
+  full_name varchar(50)
+  workphone varchar(50)
+  cellphone varchar(50)
+  address varchar(100)
+  city varchar(50)
+  country_code varchar(10)
+  id_number varchar(50)
+  language varchar(10) [default: 'vi']
+  data json
+  extra json
+
+  Indexes {
+    user_name
+    email
+    create_date
+    full_name
+    cellphone
+    status
+    role
+    group_id
+    group_role
+    city
+    country_code
+    id_number
+  }
+}
+
+Table user_group as USRGRP {
+  id int [pk, increment]
+  type varchar(50)
+  name varchar(100)
+  status varchar(50)
+  description text
+  create_date timestamp
+  data json
+  extra json
+
+  Indexes {
+    type
+    name
+    status
+    create_date
+  }
+}
+
+Table configuration as CFG {
+  id int [pk, increment]
+  type varchar(50)
+  name varchar(100)
+  version int
+  status varchar(50)
+  create_date timestamp
+  contents json
+  extra json
+
+  Indexes {
+    type
+    name
+    version
+    (type, name, version) [unique]
+    create_date
+    status
+  }
+}
+
+Table history as HTR {
+  id int [pk, increment]
+  type varchar(50)
+  action varchar(50)
+  target_user_id int [ref: > U.id]
+  request_user_id int [ref: > U.id]
+  status varchar(50)
+  create_date timestamp
+  end_date timestamp
+  contents json
+  extra json
+
+  Indexes {
+    type
+    action
+    target_user_id
+    request_user_id
+    status
+    create_date
+    end_date
+  }
+}
+
+Table report as RPT {
+  id int [pk, increment]
+  type varchar(50)
+  name varchar(100)
+  status varchar(50)
+  start_date timestamp
+  end_date timestamp
+  contents json
+  extra json
+
+  Indexes {
+    type
+    name
+    status
+    start_date
+    end_date
+  }
+}
+
+Table ticket as TKT {
+  id int [pk, increment]
+  type varchar(50)
+  code varchar(50)
+  user_id int [ref: > U.id]
+  target_id int
+  status varchar(50)
+  level varchar(50)
+  issue varchar(255)
+  create_date timestamp
+  end_date timestamp
+  title varchar(255)
+  data json
+  extra json
+
+  Indexes {
+    type
+    code
+    user_id
+    target_id
+    status
+    level
+    issue
+    create_date
+    end_date
+  }
+}
+
+Table support as SPT {
+  id int [pk, increment]
+  type varchar(50)
+  code varchar(50)
+  user_id int [ref: > U.id]
+  ticket_id int [ref: > TKT.id]
+  status varchar(50)
+  issue varchar(255)
+  create_date timestamp
+  end_date timestamp
+  description varchar(1024)
+  data json
+  extra json
+
+  Indexes {
+    type
+    code
+    user_id
+    ticket_id
+    status
+    issue
+    create_date
+    end_date
+  }
+}
+
+Table product as PD {
+  id int [pk, increment]
+  type varchar(50)
+  code varchar(100)
+  name varchar(100)
+  description text
+  create_date timestamp
+  end_date timestamp
+  info json
+  status varchar(50) [default: 'ENABLED']
+  region_id varchar(50) [ref: > REGN.id]
+  pricing json
+  extra json
+
+  Indexes {
+    id
+    type
+    code
+    name
+    create_date
+    end_date
+    status
+    region_id
+  }
+}
+
+Table region as REGN {
+  id varchar(50) [pk]
+  name varchar(50)
+  description text
+  create_date timestamp
+  status varchar(50)
+  address varchar(100)
+  city varchar(50)
+  country_code varchar(10)
+  data json
+  extra json
+
+  Indexes {
+    id
+    name
+    create_date
+    status
+    city
+    country_code
+  }
+}
+
+
+Table promotion as PMT {
+  id int [pk, increment]
+  type varchar(50) [default: 'DISCOUNT']
+  name varchar(50)
+  description text
+  create_date timestamp
+  start_date timestamp
+  end_date timestamp
+  status varchar(50)
+  region_id varchar(50) [ref: > REGN.id]
+  target_product_types json
+  target_product_ids json
+  product_settings json
+  user_settings json
+  settings json
+  discount_code varchar(100)
+  extra json
+
+  Indexes {
+    type
+    create_date
+    start_date
+    end_date
+    status
+    region_id
+    target_product_types
+    target_product_ids
+    discount_code
+  }
+}
+
+Table order_group as ORDGRP {
+  id int [pk, increment]
+  type varchar(50)
+  code varchar(50)
+  user_id int [ref: > U.id]
+  create_date timestamp
+  status varchar(50)
+  data json
+  notes text
+  extra json
+
+  Indexes {
+    type
+    code
+    user_id
+    create_date
+    status
+  }
+}
+
+Table order as ORD {
+  id int [pk, increment]
+  type varchar(50)
+  product_type varchar(50)
+  code varchar(50)
+  name varchar(50)
+  user_id int [ref: > U.id]
+  group_id int [ref: > ORDGRP.id]
+  price bigint
+  price_paid bigint
+  amount int
+  duration varchar(50)
+  status varchar(50)
+  create_date timestamp
+  start_date timestamp
+  end_date timestamp
+  discount_code varchar(100)
+  promotion_id int [ref: > PMT.id]
+  payment_type varchar(50)
+  currency varchar(10)
+  region_id varchar(50) [ref: > REGN.id]
+  data json
+  notes text
+  extra json
+
+  Indexes {
+    type
+    product_type
+    code
+    user_id
+    group_id
+    status
+    create_date
+    start_date
+    end_date
+    discount_code
+    promotion_id
+    payment_type
+    region_id
+  }
+}
+
+Table order_product as ORDPD {
+  id int [pk, increment]
+  order_id int [ref: > ORD.id]
+  product_id int [ref: > PD.id]
+  price bigint
+  price_paid bigint
+  data json
+  extra json
+
+  Indexes {
+    order_id
+    product_id
+  }
+}
+
+Table billing as BILL {
+  id int [pk, increment]
+  type varchar(50)
+  code varchar(50)
+  user_id int [ref: > U.id]
+  order_id int [ref: > ORD.id]
+  create_date timestamp
+  end_date timestamp
+  status varchar(50)
+  price bigint
+  price_paid bigint
+  currency varchar(10)
+  data json
+  notes text
+  extra json
+
+  Indexes {
+    type
+    code
+    user_id
+    order_id
+    create_date
+    end_date
+    status
+  }
+}
+
+Table balance as BLNC {
+  id int [pk, increment]
+  user_id int [unique, ref: > U.id]
+  type varchar(50)
+  create_date timestamp
+  end_date timestamp
+  status varchar(50)
+  balance bigint
+  currency varchar(10)
+  data json
+  notes text
+  extra json
+
+  Indexes {
+    user_id
+    type
+    create_date
+    end_date
+    status
+    balance
+  }
+}
+
+Table compute as CPU {
+  id int [pk, increment]
+  type varchar(50)
+  name varchar(100)
+  version int
+  user_id int [ref: > U.id]
+  order_id int [ref: > ORD.id]
+  description text
+  backend_id varchar(512)
+  backend_status varchar(255)
+  public_ip varchar(512)
+  create_date timestamp
+  end_date timestamp
+  status varchar(50)
+  region_id varchar(50) [ref: > REGN.id]
+  data json
+  extra json
+
+  Indexes {
+    type
+    name
+    version
+    user_id
+    order_id
+    backend_id
+    create_date
+    end_date
+    status
+    public_ip
+    region_id
+  }
+}
+
+Table session as SSN {
+  id int [pk, increment]
+  session_id varchar(1024) [unique]
+  data varbinary
+  expiry timestamp
+
+  Indexes {
+    session_id
+  }
+}
+
+Table lock as LCK {
+  id varchar(255) [pk]
+  timestamp timestamp
+}
+
+Table public_ip as PUBIP {
+  addr varchar(255) [pk]
+  type varchar(50)
+  version int
+  status varchar(50)
+  mac_addr varchar(50)
+  user_id int [ref: > U.id]
+  compute_id int [ref: > CPU.id]
+  create_date timestamp
+  start_date timestamp
+  end_date timestamp
+  data json
+  extra json
+
+  Indexes {
+    type
+    version
+    status
+    mac_addr
+    user_id
+    compute_id
+    create_date
+    start_date
+    end_date
+  }
+}
+
+Table task as TASK {
+  id int [pk, increment]
+  type varchar(50)
+  name varchar(50)
+  user_id int [ref: > U.id]
+  target_id int
+  target_entity varchar(16384)
+  target_time varchar(255)
+  target_date varchar(255)
+  status varchar(50)
+  create_date timestamp
+  start_date timestamp
+  end_date timestamp
+  description varchar(1024)
+  data json
+  extra json
+
+  Indexes {
+    type
+    name
+    user_id
+    target_id
+    target_entity
+    target_time
+    target_date
+    status
+    create_date
+    start_date
+    end_date
+  }
+}
+
+
+Table temp as TMP {
+  id int [pk, increment]
+  name varchar
+  version int
+  description text
+  date timestamp
+  data json
+}

@@ -1,0 +1,1707 @@
+# Vietnamese translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-08-13 20:47+0700\n"
+"PO-Revision-Date: 2020-08-13 07:34+0700\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: vi\n"
+"Language-Team: vi <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: application/__init__.py:60
+msgid "Please log in to access this page."
+msgstr "Hãy đăng nhập để truy cập nội dung này"
+
+#: application/base/errors.py:8
+msgid "Failed to commit object in database"
+msgstr ""
+
+#: application/base/errors.py:10
+msgid "Failed to acquire lock in database"
+msgstr ""
+
+#: application/base/errors.py:12
+msgid "Failed to release lock in database"
+msgstr ""
+
+#: application/base/errors.py:15
+msgid "Object listing condition invalid"
+msgstr ""
+
+#: application/base/errors.py:17
+msgid "Request param invalid"
+msgstr ""
+
+#: application/base/errors.py:20
+msgid "Configuration not found"
+msgstr ""
+
+#: application/base/errors.py:22
+msgid "Configuration value not found"
+msgstr ""
+
+#: application/base/errors.py:25
+msgid "User not found"
+msgstr ""
+
+#: application/base/errors.py:27
+msgid "User not authorized"
+msgstr ""
+
+#: application/base/errors.py:29
+msgid "User action not allowed"
+msgstr ""
+
+#: application/base/errors.py:31
+msgid "User not activated"
+msgstr ""
+
+#: application/base/errors.py:33
+msgid "User already activated"
+msgstr ""
+
+#: application/base/errors.py:35
+msgid "User blocked or deleted"
+msgstr ""
+
+#: application/base/errors.py:37
+msgid "User already exists"
+msgstr ""
+
+#: application/base/errors.py:39
+msgid "User token invalid"
+msgstr ""
+
+#: application/base/errors.py:41
+msgid "User name invalid"
+msgstr ""
+
+#: application/base/errors.py:43
+msgid "User e-mail invalid"
+msgstr ""
+
+#: application/base/errors.py:45
+msgid "User password invalid"
+msgstr ""
+
+#: application/base/errors.py:47
+msgid "User password does not meet requirement"
+msgstr ""
+
+#: application/base/errors.py:49
+msgid "User role invalid"
+msgstr ""
+
+#: application/base/errors.py:51
+msgid "User status invalid"
+msgstr ""
+
+#: application/base/errors.py:53
+msgid "Failed to create user"
+msgstr ""
+
+#: application/base/errors.py:55
+msgid "Failed to update user"
+msgstr ""
+
+#: application/base/errors.py:57
+msgid "Failed to delete user"
+msgstr ""
+
+#: application/base/errors.py:60
+msgid "User balance not found"
+msgstr ""
+
+#: application/base/errors.py:63
+msgid "Order group not found"
+msgstr ""
+
+#: application/base/errors.py:66
+msgid "Order not found"
+msgstr ""
+
+#: application/base/errors.py:68
+msgid "Order not finished"
+msgstr ""
+
+#: application/base/errors.py:70
+msgid "Order already finished"
+msgstr ""
+
+#: application/base/errors.py:72
+msgid "Order expired"
+msgstr ""
+
+#: application/base/errors.py:74
+msgid "Order product type not found"
+msgstr ""
+
+#: application/base/errors.py:76
+msgid "Order type invalid"
+msgstr ""
+
+#: application/base/errors.py:78
+msgid "Order status invalid"
+msgstr ""
+
+#: application/base/errors.py:80
+msgid "Order amount invalid"
+msgstr ""
+
+#: application/base/errors.py:82
+msgid "Order duration invalid"
+msgstr ""
+
+#: application/base/errors.py:84
+msgid "Order price not match"
+msgstr ""
+
+#: application/base/errors.py:86
+msgid "Order validation failed"
+msgstr ""
+
+#: application/base/errors.py:88
+msgid "Too many orders created"
+msgstr ""
+
+#: application/base/errors.py:91
+msgid "Payment not found"
+msgstr ""
+
+#: application/base/errors.py:93
+msgid "Payment type not supported"
+msgstr ""
+
+#: application/base/errors.py:95
+msgid "Payment type invalid"
+msgstr ""
+
+#: application/base/errors.py:97
+msgid "Payment currency invalid"
+msgstr ""
+
+#: application/base/errors.py:99
+msgid "Payment currency not supported"
+msgstr ""
+
+#: application/base/errors.py:101
+msgid "Payment starts failed"
+msgstr ""
+
+#: application/base/errors.py:103
+msgid "Payment finishes failed"
+msgstr ""
+
+#: application/base/errors.py:105
+msgid "Payment secure code invalid"
+msgstr ""
+
+#: application/base/errors.py:108
+msgid "Region not found"
+msgstr ""
+
+#: application/base/errors.py:110
+msgid "Region not supported"
+msgstr ""
+
+#: application/base/errors.py:113
+msgid "Promotion not found"
+msgstr ""
+
+#: application/base/errors.py:115
+msgid "Promotion not enabled"
+msgstr ""
+
+#: application/base/errors.py:117
+msgid "Promotion not applied"
+msgstr ""
+
+#: application/base/errors.py:119
+msgid "Promotion use exceeded"
+msgstr ""
+
+#: application/base/errors.py:121
+msgid "Product not accepted for promotion"
+msgstr ""
+
+#: application/base/errors.py:123
+msgid "User not accepted for promotion"
+msgstr ""
+
+#: application/base/errors.py:125
+msgid "Promotion resource limit"
+msgstr ""
+
+#: application/base/errors.py:127
+msgid "Promotion condition not met"
+msgstr ""
+
+#: application/base/errors.py:130
+msgid "Product not found"
+msgstr ""
+
+#: application/base/errors.py:132
+msgid "Product not enabled"
+msgstr ""
+
+#: application/base/errors.py:134
+msgid "Product type invalid"
+msgstr ""
+
+#: application/base/errors.py:136
+msgid "Product amount invalid"
+msgstr ""
+
+#: application/base/errors.py:139
+msgid "Product type not found"
+msgstr ""
+
+#: application/base/errors.py:141
+msgid "Product type not supported"
+msgstr ""
+
+#: application/base/errors.py:144
+msgid "History not found"
+msgstr ""
+
+#: application/base/errors.py:147
+msgid "Report not found"
+msgstr ""
+
+#: application/base/errors.py:150
+msgid "Ticket not found"
+msgstr ""
+
+#: application/base/errors.py:153
+msgid "Compute not found"
+msgstr ""
+
+#: application/base/errors.py:155
+msgid "Compute not enabled"
+msgstr ""
+
+#: application/base/errors.py:157
+msgid "Compute not available"
+msgstr ""
+
+#: application/base/errors.py:159
+msgid "Compute locked"
+msgstr ""
+
+#: application/base/errors.py:161
+msgid "Compute deleted"
+msgstr ""
+
+#: application/base/errors.py:163
+msgid "Compute is running"
+msgstr ""
+
+#: application/base/errors.py:165
+msgid "Compute was stopped"
+msgstr ""
+
+#: application/base/errors.py:167
+msgid "Compute name invalid"
+msgstr ""
+
+#: application/base/errors.py:169
+msgid "Compute username invalid"
+msgstr ""
+
+#: application/base/errors.py:171
+msgid "Compute password invalid"
+msgstr ""
+
+#: application/base/errors.py:173
+msgid "Compute password does not meet requirement"
+msgstr ""
+
+#: application/base/errors.py:175
+msgid "Compute ssh key invalid"
+msgstr ""
+
+#: application/base/errors.py:177
+msgid "Compute info missing"
+msgstr ""
+
+#: application/base/errors.py:179
+msgid "Compute resource exhausted"
+msgstr ""
+
+#: application/base/errors.py:182
+msgid "Failed to lock compute"
+msgstr ""
+
+#: application/base/errors.py:184
+msgid "Failed to unlock compute"
+msgstr ""
+
+#: application/base/errors.py:186
+msgid "Failed to create compute"
+msgstr ""
+
+#: application/base/errors.py:188
+msgid "Failed to re-create compute"
+msgstr ""
+
+#: application/base/errors.py:190
+msgid "Failed to update compute"
+msgstr ""
+
+#: application/base/errors.py:192
+msgid "Failed to delete compute"
+msgstr ""
+
+#: application/base/errors.py:195
+msgid "Compute action not supported"
+msgstr ""
+
+#: application/base/errors.py:198
+msgid "Compute stats not supported"
+msgstr ""
+
+#: application/base/errors.py:201
+msgid "Compute snapshot not supported"
+msgstr ""
+
+#: application/base/errors.py:203
+msgid "Compute snapshot not found"
+msgstr ""
+
+#: application/base/errors.py:205
+msgid "Compute snapshot already exists"
+msgstr ""
+
+#: application/base/errors.py:207
+msgid "Failed to get snapshot of compute"
+msgstr ""
+
+#: application/base/errors.py:209
+msgid "Compute snapshot exceeded"
+msgstr ""
+
+#: application/base/errors.py:211
+msgid "Compute snapshot name invalid"
+msgstr ""
+
+#: application/base/errors.py:213
+msgid "Failed to create snapshot of compute"
+msgstr ""
+
+#: application/base/errors.py:215
+msgid "Failed to update snapshot of compute"
+msgstr ""
+
+#: application/base/errors.py:217
+msgid "Failed to delete snapshot of compute"
+msgstr ""
+
+#: application/base/errors.py:219
+msgid "Failed to rollback snapshot of compute"
+msgstr ""
+
+#: application/base/errors.py:222
+msgid "Compute backup not supported"
+msgstr ""
+
+#: application/base/errors.py:224
+msgid "Compute backup not found"
+msgstr ""
+
+#: application/base/errors.py:226
+msgid "Compute backup exceeded"
+msgstr ""
+
+#: application/base/errors.py:228
+msgid "Failed to get backup of compute"
+msgstr ""
+
+#: application/base/errors.py:230
+msgid "Failed to create backup of compute"
+msgstr ""
+
+#: application/base/errors.py:232
+msgid "Failed to update backup of compute"
+msgstr ""
+
+#: application/base/errors.py:234
+msgid "Failed to delete backup of compute"
+msgstr ""
+
+#: application/base/errors.py:237
+msgid "Compute backup file not found"
+msgstr ""
+
+#: application/base/errors.py:239
+msgid "Compute backup file exceeded"
+msgstr ""
+
+#: application/base/errors.py:241
+msgid "Failed to get backup file of compute"
+msgstr ""
+
+#: application/base/errors.py:243
+msgid "Failed to restore backup file of compute"
+msgstr ""
+
+#: application/base/errors.py:246
+msgid "Compute security group not found"
+msgstr ""
+
+#: application/base/errors.py:248
+msgid "Compute security group invalid"
+msgstr ""
+
+#: application/base/errors.py:250
+msgid "Failed to get security group of compute"
+msgstr ""
+
+#: application/base/errors.py:252
+msgid "Failed to create security group of compute"
+msgstr ""
+
+#: application/base/errors.py:254
+msgid "Failed to update security group of compute"
+msgstr ""
+
+#: application/base/errors.py:256
+msgid "Failed to delete security group of compute"
+msgstr ""
+
+#: application/base/errors.py:259
+msgid "Compute task not found"
+msgstr ""
+
+#: application/base/errors.py:261
+msgid "Compute task invalid"
+msgstr ""
+
+#: application/base/errors.py:263
+msgid "Compute sync params invalid"
+msgstr ""
+
+#: application/base/errors.py:265
+msgid "Compute sync failed"
+msgstr ""
+
+#: application/base/errors.py:267
+msgid "Compute management action invalid"
+msgstr ""
+
+#: application/base/errors.py:270
+msgid "Backend cluster not found"
+msgstr ""
+
+#: application/base/errors.py:272
+msgid "Backend node not found"
+msgstr ""
+
+#: application/base/errors.py:274
+msgid "Backend resource not found"
+msgstr ""
+
+#: application/base/errors.py:276
+msgid "Backend connection lost"
+msgstr ""
+
+#: application/base/errors.py:278
+msgid "Failed to connect to backend"
+msgstr ""
+
+#: application/base/errors.py:280
+msgid "Timeout when executing backend task"
+msgstr ""
+
+#: application/base/errors.py:282
+msgid "Backend error occurred"
+msgstr ""
+
+#: application/base/errors.py:285
+msgid "Network IP not found"
+msgstr ""
+
+#: application/base/errors.py:287
+msgid "Network IP in use"
+msgstr ""
+
+#: application/base/errors.py:289
+msgid "Network IP address invalid"
+msgstr ""
+
+#: application/base/errors.py:291
+msgid "Network IP version invalid"
+msgstr ""
+
+#: application/base/errors.py:293
+msgid "Network IP status invalid"
+msgstr ""
+
+#: application/base/errors.py:295
+msgid "Network IP is out of pools"
+msgstr ""
+
+#: application/base/errors.py:297
+msgid "Network IP pools invalid"
+msgstr ""
+
+#: application/base/errors.py:299
+msgid "Network IP pools exhausted"
+msgstr ""
+
+#: application/base/errors.py:301
+msgid "Failed to create IP in database"
+msgstr ""
+
+#: application/base/errors.py:303
+msgid "Failed to update IP in database"
+msgstr ""
+
+#: application/base/errors.py:305
+msgid "Failed to delete IP in database"
+msgstr ""
+
+#: application/base/errors.py:308
+msgid "Failed to create IP in Netbox"
+msgstr ""
+
+#: application/base/errors.py:310
+msgid "Failed to delete IP in Netbox"
+msgstr ""
+
+#: application/base/errors.py:313
+msgid "Failed to send activation e-mail"
+msgstr ""
+
+#: application/base/errors.py:315
+msgid "Failed to send reset password e-mail"
+msgstr ""
+
+#: application/base/errors.py:317
+msgid "Failed to send order complete e-mail"
+msgstr ""
+
+#: application/base/errors.py:320
+msgid "Unknown error"
+msgstr ""
+
+#: application/forms/change_password.py:18
+#: application/templates/profile.html:252
+#: application/templates/profile.html:255
+msgid "Current password"
+msgstr "Mật khẩu hiện tại"
+
+#: application/forms/change_password.py:19
+#: application/forms/reset_password.py:19
+#: application/templates/profile.html:262
+#: application/templates/profile.html:265
+msgid "New password"
+msgstr "Mật khẩu mới"
+
+#: application/forms/change_password.py:20
+#: application/forms/reset_password.py:20
+#: application/templates/profile.html:272
+#: application/templates/profile.html:275
+msgid "Retype new password"
+msgstr "Nhập lại mật khẩu"
+
+#: application/forms/change_password.py:21
+#: application/forms/reset_password.py:21 application/routes/user/user.py:144
+#: application/routes/user/user.py:147 application/routes/user/user.py:149
+#: application/templates/profile.html:113
+#: application/templates/profile.html:245
+msgid "Change password"
+msgstr "Đổi mật khẩu"
+
+#: application/forms/forgot_password.py:16 application/forms/login.py:18
+#: application/forms/profile.py:19
+#: application/templates/admin/user_create.html:14
+#: application/templates/admin/user_show_detail.html:11
+#: application/templates/admin/users.html:35
+#: application/templates/login.html:52 application/templates/profile.html:23
+#: application/templates/profile.html:140
+#: application/templates/register.html:57
+msgid "Username"
+msgstr "Tên user"
+
+#: application/forms/forgot_password.py:17 application/routes/user/user.py:191
+#: application/routes/user/user.py:193
+#: application/templates/forgot_password.html:4
+#: application/templates/forgot_password.html:63
+#: application/templates/reset_password.html:4
+msgid "Reset password"
+msgstr "Reset mật khẩu"
+
+#: application/forms/login.py:19 application/forms/profile.py:30
+#: application/forms/profile.py:31 application/forms/registration.py:26
+#: application/templates/admin/user_create.html:90
+#: application/templates/compute_create_modal.html:28
+#: application/templates/compute_create_modal.html:36
+#: application/templates/register.html:87
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: application/forms/login.py:20
+msgid "Remember Me"
+msgstr "Nhớ đăng nhập này"
+
+#: application/forms/login.py:21 application/routes/user/user.py:42
+#: application/routes/user/user.py:44
+msgid "Sign In"
+msgstr "Đăng nhập"
+
+#: application/forms/profile.py:20 application/forms/registration.py:20
+msgid "Email"
+msgstr ""
+
+#: application/forms/profile.py:21 application/forms/registration.py:21
+#: application/templates/admin/user_create.html:32
+#: application/templates/admin/user_show_detail.html:19
+#: application/templates/admin/users.html:36
+#: application/templates/profile.html:33 application/templates/profile.html:160
+#: application/templates/register.html:81
+msgid "Full name"
+msgstr "Tên đầy đủ"
+
+#: application/forms/profile.py:22
+msgid "Work phone"
+msgstr "Điện thoại cơ quan"
+
+#: application/forms/profile.py:23
+msgid "Cell phone"
+msgstr "Điện thoại cá nhân"
+
+#: application/forms/profile.py:24
+#: application/templates/admin/user_create.html:50
+#: application/templates/admin/user_show_detail.html:58
+#: application/templates/profile.html:73 application/templates/profile.html:190
+msgid "Organization"
+msgstr "Cty/Tổ chức"
+
+#: application/forms/profile.py:25 application/forms/registration.py:24
+#: application/templates/admin/user_create.html:66
+#: application/templates/admin/user_show_detail.html:74
+#: application/templates/admin/users.html:40
+#: application/templates/profile.html:83 application/templates/profile.html:200
+#: application/templates/register.html:84
+msgid "Address"
+msgstr "Địa chỉ"
+
+#: application/forms/profile.py:26 application/forms/registration.py:25
+#: application/templates/admin/user_create.html:74
+#: application/templates/profile.html:93 application/templates/profile.html:210
+msgid "City"
+msgstr "Thành phố"
+
+#: application/forms/profile.py:27
+msgid "Country code"
+msgstr "Mã quốc gia"
+
+#: application/forms/profile.py:28
+#: application/templates/admin/user_show_detail.html:98
+msgid "ID number"
+msgstr "Số CMND/CCCD"
+
+#: application/forms/profile.py:29
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#: application/forms/profile.py:32 application/templates/profile.html:112
+msgid "Update profile"
+msgstr "Cập nhật tài khoản"
+
+#: application/forms/profile.py:33
+msgid "Update password"
+msgstr "Đổi mật khẩu"
+
+#: application/forms/registration.py:19
+msgid "User name"
+msgstr "Tên đăng nhập"
+
+#: application/forms/registration.py:22
+#: application/templates/admin/user_create.html:58
+#: application/templates/admin/user_show_detail.html:66
+#: application/templates/profile.html:53 application/templates/profile.html:170
+msgid "Workphone"
+msgstr "Điện thoại cơ quan"
+
+#: application/forms/registration.py:23
+#: application/templates/admin/user_create.html:41
+#: application/templates/admin/user_show_detail.html:50
+#: application/templates/admin/users.html:39
+#: application/templates/profile.html:63 application/templates/profile.html:180
+msgid "Cellphone"
+msgstr "Điện thoại cá nhân"
+
+#: application/forms/registration.py:27
+msgid "Repeat Password"
+msgstr "Nhập lại mật khẩu"
+
+#: application/routes/admin/order.py:132
+msgid "List Orders"
+msgstr ""
+
+#: application/routes/admin/user.py:92 application/routes/user/user.py:41
+#: application/routes/user/user.py:78 application/routes/user/user.py:98
+#: application/routes/user/user.py:122 application/routes/user/user.py:146
+#: application/routes/user/user.py:168 application/routes/user/user.py:190
+msgid "errormessage"
+msgstr ""
+
+#: application/routes/admin/user.py:113
+msgid "List Users"
+msgstr ""
+
+#: application/routes/user/compute.py:68
+msgid "DANH SÁCH COMPUTES"
+msgstr "COMPUTES"
+
+#: application/routes/user/dashboard.py:46
+msgid "VPS/CLOUD"
+msgstr ""
+
+#: application/routes/user/order.py:35
+msgid "DANH SÁCH ĐƠN HÀNG"
+msgstr "ORDERS"
+
+#: application/routes/user/user.py:75
+msgid "Congratulations, you are now able to log in."
+msgstr "Xin chúc mừng, bạn có thể tiếp tục đăng nhập"
+
+#: application/routes/user/user.py:95
+msgid "Congratulations, you are now a registered user!"
+msgstr "Xin chúc mừng, bạn đã đăng ký thành công"
+
+#: application/routes/user/user.py:99 application/routes/user/user.py:101
+#: application/templates/_header.html:113 application/templates/login.html:67
+#: application/templates/register.html:4
+#: application/templates/register.html:149
+msgid "Register"
+msgstr "Đăng ký"
+
+#: application/routes/user/user.py:119
+msgid "Update profile successfully"
+msgstr "Cập nhật tài khoản thành công"
+
+#: application/routes/user/user.py:123 application/routes/user/user.py:125
+msgid "Profile"
+msgstr "Tài khoản"
+
+#: application/routes/user/user.py:143
+msgid "Update password success"
+msgstr "Đổi mật khảu thành công"
+
+#: application/routes/user/user.py:165
+msgid "Check e-mail to reset your password"
+msgstr "Vui lòng kiểm tra hòm thư để reset mật khẩu"
+
+#: application/routes/user/user.py:166 application/routes/user/user.py:169
+#: application/routes/user/user.py:171 application/templates/login.html:69
+msgid "Forgot password"
+msgstr "Quên mật khẩu"
+
+#: application/routes/user/user.py:187
+msgid "Your password has been reset"
+msgstr "Mật khẩu của bạn đã được reset"
+
+#: application/templates/_base.html:50
+#: application/templates/admin/computes.html:4
+#: application/templates/admin/orders.html:4
+#: application/templates/admin/users.html:4
+#: application/templates/compute_service.html:4
+#: application/templates/computes.html:4
+#: application/templates/forgot_password.html:4
+#: application/templates/login.html:4 application/templates/orders.html:4
+#: application/templates/profile.html:4 application/templates/register.html:4
+#: application/templates/registered.html:4
+#: application/templates/reset_password.html:4
+msgid "Home"
+msgstr "Trang chủ"
+
+#: application/templates/_header.html:43 application/templates/profile.html:4
+#: application/templates/profile.html:133
+msgid "User profile"
+msgstr "Thông tin tài khoản"
+
+#: application/templates/_header.html:46
+msgid "Log out"
+msgstr "Thoát"
+
+#: application/templates/_header.html:107
+msgid "Home page"
+msgstr "Trang chủ"
+
+#: application/templates/_header.html:110
+msgid "Service"
+msgstr "Dịch vụ"
+
+#: application/templates/_header.html:114
+#: application/templates/compute_service.html:395
+#: application/templates/login.html:4
+msgid "Log in"
+msgstr "Đăng nhập"
+
+#: application/templates/_header.html:119
+#: application/templates/admin/users.html:4
+msgid "Users"
+msgstr ""
+
+#: application/templates/_header.html:122
+#: application/templates/_header.html:129
+#: application/templates/admin/orders.html:4
+#: application/templates/orders.html:4
+msgid "Orders"
+msgstr "Đơn hàng"
+
+#: application/templates/_header.html:125
+#: application/templates/_header.html:132
+#: application/templates/admin/computes.html:4
+#: application/templates/computes.html:4
+msgid "Computes"
+msgstr ""
+
+#: application/templates/backup_file.html:9
+msgid "Backup Files"
+msgstr ""
+
+#: application/templates/backup_file.html:16
+msgid "Filename"
+msgstr "Tên file"
+
+#: application/templates/backup_file.html:17
+msgid "Size (bytes)"
+msgstr "Kích thước (bytes)"
+
+#: application/templates/backup_file.html:18
+msgid "Created Date"
+msgstr "Ngày tạo"
+
+#: application/templates/backup_file.html:26
+msgid "Number of backup files"
+msgstr "Số backup files"
+
+#: application/templates/backup_file.html:27
+#: application/templates/snapshot.html:19
+msgid "Total space used"
+msgstr "Dung lượng đã sử dụng"
+
+#: application/templates/backup_file.html:32
+#: application/templates/backup_file.html:52
+#: application/templates/snapshot.html:26
+#: application/templates/snapshot.html:79
+msgid "Restore"
+msgstr "Khôi phục"
+
+#: application/templates/admin/orders.html:127
+#: application/templates/admin/orders.html:145
+#: application/templates/admin/users.html:59
+#: application/templates/admin/users.html:97
+#: application/templates/backup_file.html:33
+#: application/templates/backup_file.html:71
+#: application/templates/backup_job.html:30
+#: application/templates/backup_job.html:206
+#: application/templates/security_group.html:33
+#: application/templates/security_group.html:136
+#: application/templates/snapshot.html:27
+#: application/templates/snapshot.html:97
+msgid "Remove"
+msgstr "Xóa"
+
+#: application/templates/admin/orders.html:117
+#: application/templates/admin/users.html:89
+#: application/templates/backup_file.html:44
+#: application/templates/backup_file.html:63
+#: application/templates/backup_job.html:198
+#: application/templates/computes.html:49
+#: application/templates/computes.html:80 application/templates/orders.html:45
+#: application/templates/register.html:131
+#: application/templates/security_group.html:128
+#: application/templates/snapshot.html:71
+#: application/templates/snapshot.html:89
+msgid "Confirmation"
+msgstr "Xác nhận"
+
+#: application/templates/backup_file.html:47
+msgid "Please confirm to restore from backup file"
+msgstr "Vui lòng xác nhận khôi phục từ backup file"
+
+#: application/templates/admin/orders.html:126
+#: application/templates/admin/user_create.html:109
+#: application/templates/admin/users.html:96
+#: application/templates/backup_file.html:51
+#: application/templates/backup_file.html:70
+#: application/templates/backup_job.html:187
+#: application/templates/backup_job.html:205
+#: application/templates/compute_create_modal.html:83
+#: application/templates/computes.html:55
+#: application/templates/computes.html:86
+#: application/templates/order_confirm.html:127
+#: application/templates/orders.html:50 application/templates/profile.html:230
+#: application/templates/profile.html:284
+#: application/templates/security_group.html:117
+#: application/templates/security_group.html:135
+#: application/templates/snapshot.html:78
+#: application/templates/snapshot.html:96
+msgid "Close"
+msgstr "Đóng"
+
+#: application/templates/backup_file.html:66
+msgid "Please confirm to remove backup file"
+msgstr "Vui lòng xác nhận xóa backup file"
+
+#: application/templates/backup_job.html:17
+msgid "Backup time"
+msgstr "Thời gian backup"
+
+#: application/templates/backup_job.html:18
+msgid "Backup date"
+msgstr "Ngày backup"
+
+#: application/templates/backup_job.html:19
+#: application/templates/backup_job.html:174
+msgid "Mode"
+msgstr ""
+
+#: application/templates/backup_job.html:20
+msgid "Enabled"
+msgstr ""
+
+#: application/templates/backup_job.html:28
+#: application/templates/backup_job.html:41
+msgid "Schedule backup"
+msgstr "Lịch backup"
+
+#: application/templates/admin/orders.html:144
+#: application/templates/backup_job.html:29
+#: application/templates/compute_create_modal.html:85
+#: application/templates/profile.html:231
+#: application/templates/profile.html:285
+#: application/templates/security_group.html:32
+msgid "Update"
+msgstr "Cập nhật"
+
+#: application/templates/backup_job.html:46
+msgid "Backup weekday"
+msgstr "Ngày backup"
+
+#: application/templates/backup_job.html:69
+msgid "Backup start time"
+msgstr "Thời gian chạy backup"
+
+#: application/templates/backup_job.html:188
+msgid "Create job"
+msgstr "Tạo lịch"
+
+#: application/templates/backup_job.html:201
+msgid "Please confirm to remove backup job"
+msgstr "Vui lòng xác nhận xóa lịch backup"
+
+#: application/templates/admin/orders.html:149
+#: application/templates/compute_create_modal.html:7
+#: application/templates/compute_create_modal.html:84
+msgid "Create compute"
+msgstr "Tạo compute"
+
+#: application/templates/compute_create_modal.html:14
+msgid "Compute name"
+msgstr "Tên compute"
+
+#: application/templates/compute_create_modal.html:18
+msgid "Compute user"
+msgstr ""
+
+#: application/templates/compute_create_modal.html:24
+msgid "User access type"
+msgstr "Hình thức đăng nhập"
+
+#: application/templates/compute_create_modal.html:30
+msgid "SSH key"
+msgstr ""
+
+#: application/templates/compute_create_modal.html:40
+#: application/templates/register.html:95
+msgid "Retype password"
+msgstr "Nhập lại mật khẩu"
+
+#: application/templates/compute_create_modal.html:45
+msgid "Private key"
+msgstr ""
+
+#: application/templates/compute_create_modal.html:49
+msgid "Make new key"
+msgstr "Tạo key mới"
+
+#: application/templates/compute_create_modal.html:50
+msgid "Download key"
+msgstr "Tải key về"
+
+#: application/templates/compute_create_modal.html:54
+msgid "Grant read permission on PEM file"
+msgstr "Thêm quyền READ cho PEM file"
+
+#: application/templates/admin/computes.html:59
+#: application/templates/compute_create_modal.html:58
+#: application/templates/computes.html:30
+#: application/templates/order_show_detail.html:104
+#: application/templates/register.html:18
+msgid "Notes"
+msgstr "Ghi chú"
+
+#: application/templates/compute_create_modal.html:64
+msgid "Send me notification e-mail when done"
+msgstr "Gửi thông báo qua e-mail khi hoàn thành"
+
+#: application/templates/compute_create_modal.html:70
+msgid "Reboot compute when done"
+msgstr "Reboot compute khi hoàn thành"
+
+#: application/templates/compute_create_modal.html:75
+msgid "It may take from 30s to 10 minute to complete creating compute"
+msgstr "Thời gian tạo Compute thông thường từ 30s tới 10 phút"
+
+#: application/templates/compute_create_modal.html:76
+msgid "If modifying username/password/SSH key, a reboot is required"
+msgstr ""
+"Nếu bạn thay đổi username/password/SSH key, cần reboot lại compute để "
+"thay đổi có hiệu lực"
+
+#: application/templates/compute_create_modal.html:77
+msgid "It is recommended using SSH key for safer access"
+msgstr "Chúng tôi khuyến khích đăng nhập bằng SSH key để tăng độ bảo mật"
+
+#: application/templates/compute_service.html:4
+msgid "Vps/cloud"
+msgstr ""
+
+#: application/templates/admin/computes.html:28
+#: application/templates/admin/computes.html:56
+#: application/templates/compute_service.html:116
+#: application/templates/computes.html:27
+#: application/templates/order_show_detail.html:80
+msgid "Region"
+msgstr "Khu vực"
+
+#: application/templates/compute_service.html:125
+msgid "Pricing"
+msgstr "Bảng giá"
+
+#: application/templates/admin/order_create.html:157
+#: application/templates/compute_service.html:148
+#: application/templates/compute_service.html:177
+#: application/templates/compute_service.html:356
+#: application/templates/compute_service.html:376
+msgid "month"
+msgstr "tháng"
+
+#: application/templates/admin/order_create.html:152
+#: application/templates/compute_service.html:171
+#: application/templates/compute_service.html:351
+#: application/templates/order_confirm.html:65
+msgid "DURATION"
+msgstr "THỜI GIAN"
+
+#: application/templates/admin/order_create.html:158
+#: application/templates/admin/order_create.html:159
+#: application/templates/compute_service.html:180
+#: application/templates/compute_service.html:183
+#: application/templates/compute_service.html:357
+#: application/templates/compute_service.html:358
+msgid "months"
+msgstr "tháng"
+
+#: application/templates/admin/order_create.html:160
+#: application/templates/compute_service.html:186
+#: application/templates/compute_service.html:359
+msgid "year"
+msgstr "năm"
+
+#: application/templates/admin/order_create.html:161
+#: application/templates/admin/order_create.html:162
+#: application/templates/admin/order_create.html:163
+#: application/templates/compute_service.html:189
+#: application/templates/compute_service.html:192
+#: application/templates/compute_service.html:195
+#: application/templates/compute_service.html:360
+#: application/templates/compute_service.html:361
+#: application/templates/compute_service.html:362
+msgid "years"
+msgstr "năm"
+
+#: application/templates/compute_service.html:201
+#: application/templates/compute_service.html:390
+msgid "Start Trial"
+msgstr "Dùng Thử"
+
+#: application/templates/compute_service.html:202
+#: application/templates/compute_service.html:391
+msgid "Buy Now"
+msgstr "Mua Ngay"
+
+#: application/templates/compute_service.html:372
+msgid "Your custom package"
+msgstr "Gói tùy chỉnh của bạn"
+
+#: application/templates/compute_service.html:376
+#: application/templates/order_show_detail.html:56
+#: application/templates/orders.html:27
+msgid "Duration"
+msgstr "Thời gian"
+
+#: application/templates/admin/order_create.html:189
+#: application/templates/admin/orders.html:56
+#: application/templates/compute_service.html:378
+#: application/templates/order_show_detail.html:40
+#: application/templates/orders.html:23
+msgid "Price"
+msgstr "Giá"
+
+#: application/templates/compute_service.html:383
+msgid ""
+"The Windows provided here is TRIAL version, you take responsibility for "
+"using it. If you need the license, please contact us."
+msgstr ""
+"Phiên bản Windows này là phiên bản TRIAL, bạn tự chịu trách nhiệm về pháp"
+" lý khi sử dụng. Nếu bạn cần license của sản phẩm, vui lòng liên hệ chúng"
+" tôi."
+
+#: application/templates/compute_service.html:386
+msgid ""
+"Contact us through hotline <strong>1900.2010</strong> if you have any "
+"extra need"
+msgstr "Vui lòng liên hệ <strong>1900.2010</strong> nếu quý khách có nhu cầu khác"
+
+#: application/templates/compute_service.html:397
+msgid "Please log in to see pricing for custom packages"
+msgstr "Vui lòng đăng nhập để xem giá các gói tùy chỉnh"
+
+#: application/templates/compute_show_detail.html:7
+#: application/templates/order_show_detail.html:6
+msgid "Detailed information"
+msgstr "Thông tin chi tiết"
+
+#: application/templates/admin/computes.html:34
+#: application/templates/admin/computes.html:58
+#: application/templates/admin/orders.html:55
+#: application/templates/admin/user_show_detail.html:106
+#: application/templates/admin/users.html:38
+#: application/templates/compute_show_detail.html:13
+#: application/templates/compute_show_detail.html:24
+#: application/templates/computes.html:29
+#: application/templates/order_show_detail.html:72
+#: application/templates/orders.html:26
+msgid "Status"
+msgstr "Trạng thái"
+
+#: application/templates/compute_show_detail.html:17
+msgid "Uptime"
+msgstr "Thời gian chạy"
+
+#: application/templates/compute_show_detail.html:31
+msgid "CPU usage"
+msgstr "CPU đang dùng"
+
+#: application/templates/compute_show_detail.html:46
+msgid "Memory usage"
+msgstr "RAM đang dùng"
+
+#: application/templates/compute_show_detail.html:69
+msgid "Resource information"
+msgstr "Thông tin tài nguyên"
+
+#: application/templates/admin/computes.html:52
+#: application/templates/computes.html:24
+msgid "Name"
+msgstr "Tên"
+
+#: application/templates/admin/computes.html:53
+#: application/templates/admin/orders.html:53
+#: application/templates/admin/user_show_detail.html:35
+#: application/templates/computes.html:25
+msgid "Created date"
+msgstr "Ngày tạo"
+
+#: application/templates/admin/computes.html:55
+#: application/templates/computes.html:26
+msgid "VM ID"
+msgstr ""
+
+#: application/templates/admin/computes.html:57
+#: application/templates/computes.html:28
+msgid "Public IP"
+msgstr ""
+
+#: application/templates/admin/computes.html:109
+#: application/templates/admin/computes.html:112
+#: application/templates/admin/orders.html:140
+#: application/templates/computes.html:31
+#: application/templates/computes.html:105
+msgid "Management"
+msgstr "Quản lý"
+
+#: application/templates/computes.html:56
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#: application/templates/computes.html:67
+msgid "Access guide"
+msgstr "Hướng dẫn truy cập"
+
+#: application/templates/computes.html:83
+msgid "Warning"
+msgstr "Cảnh báo"
+
+#: application/templates/computes.html:83
+msgid ""
+"Recreating your compute will remove the compute and its data. Please do "
+"backup your important data before you perform this action."
+msgstr ""
+"Tạo lại compute sẽ xóa compute và toàn bộ dữ liệu hiện thời của bạn. Vui "
+"lòng sao lưu lại những dữ liệu quan trọng của bạn trước khi thực hiện "
+"thao tác này."
+
+#: application/templates/computes.html:87
+#: application/templates/computes.html:132
+msgid "Recreate compute"
+msgstr "Tạo lại compute"
+
+#: application/templates/computes.html:118
+msgid "Advanced configuration"
+msgstr "Nâng cao"
+
+#: application/templates/admin/computes.html:117
+#: application/templates/computes.html:125
+#: application/templates/computes.html:128
+msgid "Update compute"
+msgstr "Cập nhật compute"
+
+#: application/templates/admin/computes.html:115
+#: application/templates/computes.html:127
+msgid "Send Info to Mail"
+msgstr "Gửi thông tin Compute"
+
+#: application/templates/computes.html:130
+#: application/templates/computes.html:133
+msgid "Delete compute"
+msgstr "Xóa compute"
+
+#: application/templates/forgot_password.html:48
+msgid "Tên đăng nhập hoặc email"
+msgstr ""
+
+#: application/templates/forgot_password.html:71
+#: application/templates/forgot_password.html:72
+msgid "Your username or e-mail"
+msgstr "Tên đăng nhập hoặc e-mail của bạn"
+
+#: application/templates/login.html:55
+msgid "Your password"
+msgstr "Mật khẩu của bạn"
+
+#: application/templates/order_confirm.html:9
+msgid "Order confirmation"
+msgstr "Xác nhận đơn hàng"
+
+#: application/templates/order_confirm.html:13
+msgid "Package name"
+msgstr "Tên gói"
+
+#: application/templates/order_confirm.html:73
+msgid "PRICE"
+msgstr "GIÁ"
+
+#: application/templates/admin/orders.html:52
+#: application/templates/order_confirm.html:82
+#: application/templates/order_show_detail.html:64
+#: application/templates/orders.html:25
+msgid "Order type"
+msgstr "Loại đơn hàng"
+
+#: application/templates/order_confirm.html:88
+#: application/templates/order_show_detail.html:24
+#: application/templates/orders.html:22
+msgid "Purchase date"
+msgstr "Ngày đặt hàng"
+
+#: application/templates/order_confirm.html:95
+msgid "The price above is for reference only, it may be updated on our agreement"
+msgstr ""
+"Trên đây là chi phí tạm tính, có thể sẽ thay đổi dựa trên thỏa thuận của "
+"2 bên"
+
+#: application/templates/order_confirm.html:97
+msgid ""
+"The Windows OS provided here is TRIAL version, you take responsibility "
+"for using it. If you need the license, please contact us."
+msgstr ""
+"Phiên bản Windows này là phiên bản TRIAL, bạn tự chịu trách nhiệm về pháp"
+" lý khi sử dụng. Nếu bạn cần license của sản phẩm, vui lòng liên hệ chúng"
+" tôi."
+
+#: application/templates/order_confirm.html:100
+msgid "Limitation of hardware resources for TRIAL use"
+msgstr "Cấu hình dùng thử tối đa"
+
+#: application/templates/order_confirm.html:104
+msgid ""
+"After the trial period, if you keep the contract, the hardware resources "
+"will be adjusted accurately."
+msgstr ""
+"Sau thời gian dùng thử, nếu quý khách gia hạn hợp đồng, cấu hình sản phẩm"
+" sẽ được điều chỉnh như trên."
+
+#: application/templates/order_confirm.html:109
+msgid "Place order"
+msgstr "Đặt hàng"
+
+#: application/templates/order_confirm.html:120
+msgid "Order placed successfully"
+msgstr "Đặt hàng thàng công"
+
+#: application/templates/order_confirm.html:123
+msgid "Thanks for placing order"
+msgstr "Cám ơn bạn đã đặt hàng"
+
+#: application/templates/order_confirm.html:124
+msgid ""
+"Your order has been recorded on our system. Our sale staff will contact "
+"you as soon as possible to proceed to the next step."
+msgstr ""
+"Đơn hàng của bạn đã được tạo thành công trong hệ thống. Nhân viên bán "
+"hàng sẽ sớm liên hệ tới bạn qua số điện thoại bạn đã cung cấp để hoàn "
+"thành đơn hàng này."
+
+#: application/templates/order_show_detail.html:12
+msgid "Order info"
+msgstr "Thông tin đơn hàng"
+
+#: application/templates/admin/order_create.html:195
+#: application/templates/admin/orders.html:51
+#: application/templates/order_show_detail.html:16
+#: application/templates/orders.html:21
+msgid "Order code"
+msgstr "Mã đơn hàng"
+
+#: application/templates/order_show_detail.html:32
+msgid "Amount"
+msgstr "Số lượng"
+
+#: application/templates/order_show_detail.html:48
+msgid "Payment amount"
+msgstr "Giá thanh toán"
+
+#: application/templates/admin/order_create.html:135
+#: application/templates/admin/orders.html:57
+#: application/templates/order_show_detail.html:88
+msgid "Start date of use"
+msgstr "Ngày bắt đầu sử dụng"
+
+#: application/templates/admin/orders.html:58
+#: application/templates/order_show_detail.html:96
+msgid "End date of use"
+msgstr "Ngày hết hạn"
+
+#: application/templates/order_show_detail.html:113
+msgid "Compute info"
+msgstr "Thông tin Compute"
+
+#: application/templates/orders.html:24
+msgid "Unit"
+msgstr "Đơn vị"
+
+#: application/templates/orders.html:29
+msgid "Manage computes"
+msgstr "Quản lý Computes"
+
+#: application/templates/admin/user_create.html:23
+#: application/templates/admin/user_show_detail.html:27
+#: application/templates/admin/users.html:37
+#: application/templates/profile.html:43 application/templates/profile.html:150
+#: application/templates/register.html:73
+msgid "E-mail"
+msgstr ""
+
+#: application/templates/admin/user_create.html:82
+#: application/templates/admin/user_show_detail.html:90
+#: application/templates/profile.html:103
+#: application/templates/profile.html:220
+msgid "Country"
+msgstr "Quốc gia"
+
+#: application/templates/profile.html:163
+msgid "Enter full name"
+msgstr "Tên đầy đủ"
+
+#: application/templates/profile.html:173
+msgid "Enter workphone"
+msgstr "Điện thoại cơ quan"
+
+#: application/templates/profile.html:183
+msgid "Enter cellphone"
+msgstr "Điện thoại cá nhân"
+
+#: application/templates/profile.html:193
+msgid "Enter organization"
+msgstr "Cty/Tổ chức"
+
+#: application/templates/profile.html:203
+msgid "Enter address"
+msgstr "Địa chỉ"
+
+#: application/templates/profile.html:213
+msgid "Enter city"
+msgstr "Thành phố"
+
+#: application/templates/profile.html:223
+msgid "Enter country"
+msgstr "Tên quốc gia"
+
+#: application/templates/register.html:20
+#: application/templates/register.html:137
+msgid ""
+"Please provide us accurate registration info as we will use these info to"
+" send you activation e-mail and support you later"
+msgstr ""
+"Bạn vui lòng nhập thông tin chính xác. Chúng tôi sẽ sử dụng thông tin này"
+" để liên hệ với bạn. Nếu thông tin không chính xác, tài khoản của bạn có "
+"thể sẽ không có hiệu lực."
+
+#: application/templates/register.html:22
+msgid "Thank you"
+msgstr "Xin cám ơn"
+
+#: application/templates/register.html:32
+#: application/templates/register.html:39
+msgid "Contact"
+msgstr "Liên hệ"
+
+#: application/templates/register.html:51
+msgid "Register new account"
+msgstr "Đăng ký tài khoản"
+
+#: application/templates/register.html:65
+msgid "Your phone number"
+msgstr "Số điện thoại của bạn"
+
+#: application/templates/register.html:135
+msgid "Important"
+msgstr "Quan trọng"
+
+#: application/templates/register.html:143
+msgid "I agree to the"
+msgstr "Tôi đồng ý với"
+
+#: application/templates/register.html:143
+msgid "Terms of Service"
+msgstr "Điều khoản"
+
+#: application/templates/register.html:143
+msgid "of the service provider"
+msgstr "của nhà cung cấp dịch vụ"
+
+#: application/templates/register.html:148
+msgid "Go back"
+msgstr "Quay lại"
+
+#: application/templates/registered.html:4
+msgid "Register successfully"
+msgstr "Đăng kí thành công"
+
+#: application/templates/registered.html:18
+msgid "Please check your e-mail inbox to activate the account"
+msgstr "Vui lòng kiểm tra hòm thư để kích hoạt tài khoản"
+
+#: application/templates/reset_password.html:53
+msgid "Enter new password"
+msgstr "Nhập mật khẩu mới"
+
+#: application/templates/reset_password.html:57
+msgid "Re-enter new password"
+msgstr "Nhập lại mật khẩu"
+
+#: application/templates/security_group.html:31
+#: application/templates/security_group.html:118
+msgid "Create rule"
+msgstr "Tạo rule"
+
+#: application/templates/security_group.html:131
+msgid "Please confirm to remove firewall rule"
+msgstr "Vui lòng xác nhận xóa firewall rule"
+
+#: application/templates/snapshot.html:18
+msgid "Number of snapshots"
+msgstr "Số snapshots"
+
+#: application/templates/snapshot.html:25
+#: application/templates/snapshot.html:38
+#: application/templates/snapshot.html:61
+msgid "Create snapshot"
+msgstr "Tạo snapshot"
+
+#: application/templates/snapshot.html:43
+msgid "Snapshot name"
+msgstr "Tên snapshot"
+
+#: application/templates/snapshot.html:51
+msgid "Description"
+msgstr "Mô tả"
+
+#: application/templates/snapshot.html:74
+msgid "Please confirm to restore from snapshot"
+msgstr "Vui lòng xác nhận khôi phục về snapshot"
+
+#: application/templates/snapshot.html:92
+msgid "Please confirm to remove snapshot"
+msgstr "Vui lòng xác nhận xóa snapshot"
+
+#: application/templates/admin/computes.html:26
+#: application/templates/admin/orders.html:27
+msgid "Search by user name"
+msgstr "Tìm theo user"
+
+#: application/templates/admin/computes.html:43
+#: application/templates/admin/orders.html:42
+#: application/templates/admin/users.html:27
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: application/templates/admin/computes.html:44
+#: application/templates/admin/orders.html:43
+msgid "Clear filter"
+msgstr "Bỏ lọc"
+
+#: application/templates/admin/computes.html:54
+#: application/templates/admin/orders.html:60
+msgid "User"
+msgstr ""
+
+#: application/templates/admin/computes.html:60
+#: application/templates/admin/computes.html:78
+#: application/templates/admin/orders.html:85
+msgid "Manage"
+msgstr "Quản lý"
+
+#: application/templates/admin/order_create.html:10
+#: application/templates/admin/order_create.html:209
+#: application/templates/admin/orders.html:62
+msgid "Create order"
+msgstr "Tạo đơn hàng"
+
+#: application/templates/admin/order_create.html:29
+msgid "REGION"
+msgstr "KHU VỰC"
+
+#: application/templates/admin/order_create.html:172
+msgid "AMOUNT"
+msgstr "SỐ LƯỢNG"
+
+#: application/templates/admin/order_create.html:184
+msgid "Package info"
+msgstr "Thông tin sản phẩm"
+
+#: application/templates/admin/order_create.html:187
+#: application/templates/admin/orders.html:54
+msgid "Use duration"
+msgstr "Thời gian sử dụng"
+
+#: application/templates/admin/order_create.html:191
+msgid "Get price"
+msgstr "Lấy giá"
+
+#: application/templates/admin/order_create.html:198
+msgid "Create compute when done"
+msgstr "Tạo compute khi hoàn thành"
+
+#: application/templates/admin/order_create.html:201
+msgid "Set status APPROVED"
+msgstr "Set trạng thái đã APPROVED"
+
+#: application/templates/admin/orders.html:29
+msgid "Expire in days"
+msgstr "Số ngày sắp hết hạn"
+
+#: application/templates/admin/orders.html:31
+msgid "Order status"
+msgstr "Trạng thái đơn hàng"
+
+#: application/templates/admin/orders.html:59
+msgid "Payment method"
+msgstr "Phương pháp thanh toán"
+
+#: application/templates/admin/orders.html:120
+msgid "Please confirm to remove order"
+msgstr "Vui lòng xác nhận xóa order"
+
+#: application/templates/admin/orders.html:148
+msgid "Complete compute"
+msgstr "Hoàn thành compute"
+
+#: application/templates/admin/user_create.html:8
+#: application/templates/admin/user_create.html:110
+#: application/templates/admin/users.html:42
+msgid "Create user"
+msgstr "Tạo user"
+
+#: application/templates/admin/user_create.html:99
+msgid "Activate account now"
+msgstr "Kích hoạt tài khoản"
+
+#: application/templates/admin/user_show_detail.html:6
+msgid "Detailed Information"
+msgstr "Thông tin chi tiết"
+
+#: application/templates/admin/user_show_detail.html:42
+msgid "Role"
+msgstr ""
+
+#: application/templates/admin/user_show_detail.html:82
+msgid "User Group"
+msgstr ""
+
+#: application/templates/admin/users.html:25
+msgid "Find user"
+msgstr "Tìm user"
+
+#: application/templates/admin/users.html:92
+msgid "Please confirm to remove user"
+msgstr "Vui lòng xác nhận xóa user"
+
+#: application/utils/mail_util.py:94
+msgid "Account Activation"
+msgstr "Kích hoạt tài khoản"
+
+#: application/utils/mail_util.py:106
+msgid "Account Password Reset"
+msgstr "Reset mật khẩu"
+
+#: application/utils/mail_util.py:117
+msgid "Order Complete"
+msgstr "Đơn hàng hoàn thành"
+
+#: application/utils/mail_util.py:142
+msgid "Compute Info"
+msgstr "Thông tin Compute"
+
+#~ msgid "Change language successfully"
+#~ msgstr "Đổi ngôn ngữ thành công"
+
+#~ msgid "Order confirmation"
+#~ msgstr "Xác nhận đơn hàng"
+
+#~ msgid "Package name"
+#~ msgstr "Tên gói"
+
+#~ msgid "PRICE"
+#~ msgstr "GIÁ"
+
+#~ msgid "Order placed successfully"
+#~ msgstr "Đặt hàng thành công"
+
